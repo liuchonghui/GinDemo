@@ -16,6 +16,10 @@ func setupRouter() *gin.Engine {
 		c.String(200, "pong")
 	})
 
+	r.GET("/fetch_plugin", func(c *gin.Context) {
+		c.JSON(200, gin.H{"id": "chushou.plugin", "state": "success", "md5": "819f24d8d44fb678e0b4c5cbfe3aca68", "url": "https://gist.github.com/liuchonghui/d671bb312dceb6540e8987578f09e3b1/raw/7ff6ea477d81e044f0eb100c2da14ddbbaf94457/chushou.plugin.pl.apk"})
+	})
+
 	// Get user value
 	r.GET("/user/:name", func(c *gin.Context) {
 		user := c.Params.ByName("name")
