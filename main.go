@@ -2,6 +2,7 @@ package main
 
 import (
 	"github.com/gin-gonic/gin"
+	"fmt"
 )
 
 var DB = make(map[string]string)
@@ -17,7 +18,9 @@ func setupRouter() *gin.Engine {
 	})
 
 	r.GET("/fetch_plugin", func(c *gin.Context) {
-		c.JSON(200, gin.H{"id": "chushou.plugin", "state": "success", "md5": "819f24d8d44fb678e0b4c5cbfe3aca68", "url": "https://gist.github.com/liuchonghui/d671bb312dceb6540e8987578f09e3b1/raw/7ff6ea477d81e044f0eb100c2da14ddbbaf94457/chushou.plugin.pl.apk"})
+		ch := c.DefaultQuery("ch", "N/A")
+		fmt.Println("ch is " + ch)
+		c.JSON(200, gin.H{"id": ch, "state": "success", "md5": "819f24d8d44fb678e0b4c5cbfe3aca68", "url": "https://gist.github.com/liuchonghui/d671bb312dceb6540e8987578f09e3b1/raw/7ff6ea477d81e044f0eb100c2da14ddbbaf94457/chushou.plugin.pl.apk"})
 	})
 
 	// Get user value
