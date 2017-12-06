@@ -24,10 +24,18 @@ func setupRouter() *gin.Engine {
 		fmt.Println("ver is " + ver)
 		//c.JSON(200, gin.H{"id": ch, "state": "success", "md5": "819f24d8d44fb678e0b4c5cbfe3aca68", "url": "https://gist.github.com/liuchonghui/d671bb312dceb6540e8987578f09e3b1/raw/7ff6ea477d81e044f0eb100c2da14ddbbaf94457/chushou.plugin.pl.apk"})
 		var s []Plugin
-		s = append(s, Plugin{Id:"chushou.plugin",Md5:"819f24d8d44fb678e0b4c5cbfe3aca68",Url:"https://gist.github.com/liuchonghui/d671bb312dceb6540e8987578f09e3b1/raw/7ff6ea477d81e044f0eb100c2da14ddbbaf94457/chushou.plugin.pl.apk"})
-		s = append(s, Plugin{Id:"yilan.plugin",Md5:"2ca0e18b7c624fae402a6988a2494d39",Url:"https://gist.github.com/liuchonghui/d671bb312dceb6540e8987578f09e3b1/raw/6cfbd5852f00644fb8d1ab8222bda0abafdab706/yilan.plugin.pl.apk"})
-		s = append(s, Plugin{Id:"renren.plugin",Md5:"8ac11e966aef40c77722b57e3aebc8ac",Url:"https://gist.github.com/liuchonghui/d671bb312dceb6540e8987578f09e3b1/raw/6cfbd5852f00644fb8d1ab8222bda0abafdab706/renren.plugin.pl.apk"})
-		s = append(s, Plugin{Id:"fengxing.plugin",Md5:"e4f897ab3b08c365c4c01d46b631d81c",Url:"https://gist.github.com/liuchonghui/d671bb312dceb6540e8987578f09e3b1/raw/6cfbd5852f00644fb8d1ab8222bda0abafdab706/fengxing.plugin.pl.apk"})
+		s = append(s, Plugin{Id:"chushou.plugin",
+			Md5:"19a66f1affc18cd366353f185b09e8f0",
+			Url:"https://gist.github.com/liuchonghui/d671bb312dceb6540e8987578f09e3b1/raw/f3cd33f5dcb215feca01f7c834d42352ff494b27/chushou.plugin.pl.apk"})
+		s = append(s, Plugin{Id:"fengxing.plugin",
+			Md5:"b565aa86608345ce5c5b1b8901018524",
+			Url:"https://gist.github.com/liuchonghui/d671bb312dceb6540e8987578f09e3b1/raw/f3cd33f5dcb215feca01f7c834d42352ff494b27/fengxing.plugin.pl.apk"})
+		s = append(s, Plugin{Id:"renren.plugin",
+			Md5:"4b784dd2ddf0e7470deb331a3378364d",
+			Url:"https://gist.github.com/liuchonghui/d671bb312dceb6540e8987578f09e3b1/raw/f3cd33f5dcb215feca01f7c834d42352ff494b27/renren.plugin.pl.apk"})
+		s = append(s, Plugin{Id:"yilan.plugin",
+			Md5:"3c37e314743ea39f0b22a69ef30e57b2",
+			Url:"https://gist.github.com/liuchonghui/d671bb312dceb6540e8987578f09e3b1/raw/f3cd33f5dcb215feca01f7c834d42352ff494b27/yilan.plugin.pl.apk"})
 		var ret PluginResult
 		ret.Plugins = s
 		ret.State = "success"
