@@ -3,7 +3,6 @@ package main
 import (
 	"github.com/gin-gonic/gin"
 	"fmt"
-	"encoding/json"
 	"net/http"
 )
 
@@ -19,27 +18,48 @@ func setupRouter() *gin.Engine {
 		c.String(200, "pong")
 	})
 
+	//fmt.Println(AAA + AAA)
+
 	r.GET("/fetch_plugin", func(c *gin.Context) {
 		ver := c.DefaultQuery("ver", "N/A")
 		fmt.Println("ver is " + ver)
 		//c.JSON(200, gin.H{"id": ch, "state": "success", "md5": "819f24d8d44fb678e0b4c5cbfe3aca68", "url": "https://gist.github.com/liuchonghui/d671bb312dceb6540e8987578f09e3b1/raw/7ff6ea477d81e044f0eb100c2da14ddbbaf94457/chushou.plugin.pl.apk"})
 		var s []Plugin
-		s = append(s, Plugin{Id:"chushou.plugin",
-			Md5:"19a66f1affc18cd366353f185b09e8f0",
-			Url:"https://gist.github.com/liuchonghui/d671bb312dceb6540e8987578f09e3b1/raw/f3cd33f5dcb215feca01f7c834d42352ff494b27/chushou.plugin.pl.apk"})
-		s = append(s, Plugin{Id:"fengxing.plugin",
-			Md5:"b565aa86608345ce5c5b1b8901018524",
-			Url:"https://gist.github.com/liuchonghui/d671bb312dceb6540e8987578f09e3b1/raw/f3cd33f5dcb215feca01f7c834d42352ff494b27/fengxing.plugin.pl.apk"})
-		s = append(s, Plugin{Id:"renren.plugin",
-			Md5:"4b784dd2ddf0e7470deb331a3378364d",
-			Url:"https://gist.github.com/liuchonghui/d671bb312dceb6540e8987578f09e3b1/raw/f3cd33f5dcb215feca01f7c834d42352ff494b27/renren.plugin.pl.apk"})
-		s = append(s, Plugin{Id:"yilan.plugin",
-			Md5:"3c37e314743ea39f0b22a69ef30e57b2",
-			Url:"https://gist.github.com/liuchonghui/d671bb312dceb6540e8987578f09e3b1/raw/f3cd33f5dcb215feca01f7c834d42352ff494b27/yilan.plugin.pl.apk"})
-		var ret PluginResult
-		ret.Plugins = s
-		ret.State = "success"
-		c.JSON(http.StatusOK, ret)
+
+		var plugin_chushou_134 = Plugin{Id:"chushou.plugin",
+			Md5:Chushou_134_md5,
+			Cp:ChuShou,
+			Url:Chushou_134_url}
+		var plugin_fengxing_134 = Plugin{Id:"fengxing.plugin",
+			Md5:Fengxing_134_md5,
+			Cp:FengXing,
+			Url:Fengxing_134_url}
+		var plugin_renren_134 = Plugin{Id:"renren.plugin",
+			Md5:Renren_134_md5,
+			Cp:RenRen,
+			Url:Renren_134_url}
+		var plugin_yilan_135 = Plugin{Id:"yilan.plugin",
+			Md5:Yilan_135_md5,
+			Cp:YiLan,
+			Url:Yilan_135_url}
+
+
+		s = append(s, plugin_chushou_134)
+		s = append(s, plugin_fengxing_134)
+		s = append(s, plugin_renren_134)
+		s = append(s, plugin_yilan_135)
+
+		//var ret PluginResult
+		//ret.Plugins = s
+		//ret.State = "success"
+
+		var data Data
+		data.Result = "success"
+		data.Plugins = s
+		var fp FetchPluginResult
+		fp.Content = data
+
+		c.JSON(http.StatusOK, fp)
 		//b, err := json.Marshal(ret)
 		//if err != nil {
 		//	c.JSON(100, "{}")
@@ -89,33 +109,6 @@ func setupRouter() *gin.Engine {
 	return r
 }
 
-func FetchPluginHandler(c *gin.Context) {
-	//type JsonHolder struct {
-	//	Id   int    `json:"id"`
-	//	Name string `json:"name"`
-	//}
-	//holder := JsonHolder{Id: 1, Name: "my name"}
-	////若返回json数据，可以直接使用gin封装好的JSON方法
-	//c.JSON(http.StatusOK, holder)
-
-	var s []Plugin
-	s = append(s, Plugin{Id:"chushou.plugin",Md5:"819f24d8d44fb678e0b4c5cbfe3aca68",Url:"https://gist.github.com/liuchonghui/d671bb312dceb6540e8987578f09e3b1/raw/7ff6ea477d81e044f0eb100c2da14ddbbaf94457/chushou.plugin.pl.apk"})
-	s = append(s, Plugin{Id:"yilan.plugin",Md5:"2ca0e18b7c624fae402a6988a2494d39",Url:"https://gist.github.com/liuchonghui/d671bb312dceb6540e8987578f09e3b1/raw/9855826c39d4e5a7b3c38338f0d907ed400d3081/YiLanPlugin-debug-pl.apk"})
-	s = append(s, Plugin{Id:"renren.plugin",Md5:"8ac11e966aef40c77722b57e3aebc8ac",Url:"https://gist.github.com/liuchonghui/d671bb312dceb6540e8987578f09e3b1/raw/9855826c39d4e5a7b3c38338f0d907ed400d3081/RenRenPlugin-debug-pl.apk"})
-	s = append(s, Plugin{Id:"fengxing.plugin",Md5:"e4f897ab3b08c365c4c01d46b631d81c",Url:"https://gist.github.com/liuchonghui/d671bb312dceb6540e8987578f09e3b1/raw/9855826c39d4e5a7b3c38338f0d907ed400d3081/FengXingPlugin-debug-pl.apk"})
-	var ret PluginResult
-	ret.Plugins = s
-	ret.State = "success"
-	b, err := json.Marshal(ret)
-	if err != nil {
-		c.JSON(http.StatusOK, "{}")
-	} else {
-		fmt.Println(string(b))
-		c.JSON(http.StatusOK, string(b))
-	}
-	return
-}
-
 func main() {
 	r := setupRouter()
 	// Listen and Server in 0.0.0.0:8080
@@ -123,16 +116,22 @@ func main() {
 }
 
 type Plugin struct {
-	Id string `json:"id"`
+	Id string `json:"_id"`
 	Md5 string `json:"md5"`
+	Cp string `json:"cp"`
 	Url string `json:"url"`
 }
 
-type PluginList struct {
-	Plugins []Plugin `json:"plugins"`
+//type PluginResult struct {
+//	State string `json:"state"`
+//	Plugins []Plugin `json:"plugins"`
+//}
+
+type FetchPluginResult struct {
+	Content Data `json:"data"`
 }
 
-type PluginResult struct {
-	State string `json:"state"`
-	Plugins []Plugin `json:"plugins"`
+type Data struct {
+	Result string `json:"result"`
+	Plugins []Plugin `json:"cp_plugin"`
 }
