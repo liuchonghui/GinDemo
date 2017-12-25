@@ -1,5 +1,17 @@
 package main
 
+const Chushou_146_md5 = "a08f4d81a93193c704d06ed5d6ecb671"
+const Chushou_146_url = "https://gist.github.com/liuchonghui/b9757b65748eb42548213ec7b9572116/raw/4043822e3e0345157e9cf213d77f926026cd42c7/chushou.1.4_6.a08f4d81a93193c704d06ed5d6ecb671.apk"
+
+const Renren_146_md5 = "9abf60429aa1fe897da3063256e12e9e"
+const Renren_146_url = "https://gist.github.com/liuchonghui/b9757b65748eb42548213ec7b9572116/raw/4043822e3e0345157e9cf213d77f926026cd42c7/renren.1.4_6.9abf60429aa1fe897da3063256e12e9e.apk"
+
+const Fengxing_146_md5 = "7b1a228982ee308eab70f70132ef24d4"
+const Fengxing_146_url = "https://gist.github.com/liuchonghui/b9757b65748eb42548213ec7b9572116/raw/8f67bd8927bb26bef66d0e62efc0a0340a8623cb/fengxing.1.4_6.7b1a228982ee308eab70f70132ef24d4.apk"
+
+const Yilan_146_md5 = "2dadddf6d3e513b08b41f50c2237dc72"
+const Yilan_146_url = "https://gist.github.com/liuchonghui/b9757b65748eb42548213ec7b9572116/raw/4043822e3e0345157e9cf213d77f926026cd42c7/yilan.1.4_6.2dadddf6d3e513b08b41f50c2237dc72.apk"
+
 const Chushou_134_md5 = "0ec6a073bb8c654b49ef8e2fd11061c0"
 const Chushou_134_url = "https://gist.github.com/liuchonghui/b9757b65748eb42548213ec7b9572116/raw/78805e6af08a27ad79e06dbb3ee587c5d85457c9/chushou.1.3_4.0ec6a073bb8c654b49ef8e2fd11061c0.apk"
 

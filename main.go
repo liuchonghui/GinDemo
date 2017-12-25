@@ -25,29 +25,48 @@ func setupRouter() *gin.Engine {
 		fmt.Println("ver is " + ver)
 		//c.JSON(200, gin.H{"id": ch, "state": "success", "md5": "819f24d8d44fb678e0b4c5cbfe3aca68", "url": "https://gist.github.com/liuchonghui/d671bb312dceb6540e8987578f09e3b1/raw/7ff6ea477d81e044f0eb100c2da14ddbbaf94457/chushou.plugin.pl.apk"})
 		var s []Plugin
-
-		var plugin_chushou_134 = Plugin{Id:"chushou.plugin",
-			Md5:Chushou_134_md5,
+		////////////////////134version//////////////////////
+		//var plugin_chushou_134 = Plugin{Id:"chushou.plugin",
+		//	Md5:Chushou_134_md5,
+		//	Cp:ChuShou,
+		//	Url:Chushou_134_url}
+		//var plugin_fengxing_134 = Plugin{Id:"fengxing.plugin",
+		//	Md5:Fengxing_134_md5,
+		//	Cp:FengXing,
+		//	Url:Fengxing_134_url}
+		//var plugin_renren_134 = Plugin{Id:"renren.plugin",
+		//	Md5:Renren_134_md5,
+		//	Cp:RenRen,
+		//	Url:Renren_134_url}
+		//var plugin_yilan_135 = Plugin{Id:"yilan.plugin",
+		//	Md5:Yilan_135_md5,
+		//	Cp:YiLan,
+		//	Url:Yilan_135_url}
+		////////////////////134version//////////////////////
+		////////////////////146version//////////////////////
+		var plugin_chushou_146 = Plugin{Id:"chushou.plugin",
+			Md5:Chushou_146_md5,
 			Cp:ChuShou,
-			Url:Chushou_134_url}
-		var plugin_fengxing_134 = Plugin{Id:"fengxing.plugin",
-			Md5:Fengxing_134_md5,
+			Url:Chushou_146_url}
+		var plugin_fengxing_146 = Plugin{Id:"fengxing.plugin",
+			Md5:Fengxing_146_md5,
 			Cp:FengXing,
-			Url:Fengxing_134_url}
-		var plugin_renren_134 = Plugin{Id:"renren.plugin",
-			Md5:Renren_134_md5,
+			Url:Fengxing_146_url}
+		var plugin_renren_146 = Plugin{Id:"renren.plugin",
+			Md5:Renren_146_md5,
 			Cp:RenRen,
-			Url:Renren_134_url}
-		var plugin_yilan_135 = Plugin{Id:"yilan.plugin",
-			Md5:Yilan_135_md5,
+			Url:Renren_146_url}
+		var plugin_yilan_146 = Plugin{Id:"yilan.plugin",
+			Md5:Yilan_146_md5,
 			Cp:YiLan,
-			Url:Yilan_135_url}
+			Url:Yilan_146_url}
+		////////////////////146version//////////////////////
 
 
-		s = append(s, plugin_chushou_134)
-		s = append(s, plugin_fengxing_134)
-		s = append(s, plugin_renren_134)
-		s = append(s, plugin_yilan_135)
+		s = append(s, plugin_chushou_146)
+		s = append(s, plugin_fengxing_146)
+		s = append(s, plugin_renren_146)
+		s = append(s, plugin_yilan_146)
 
 		//var ret PluginResult
 		//ret.Plugins = s
