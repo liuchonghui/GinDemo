@@ -84,33 +84,55 @@ func setupRouter() *gin.Engine {
 		//	Url:Fenghuang_158_url}
 		////////////////////158version//////////////////////
 		////////////////////1515version//////////////////////
-		var plugin_chushou_1515 = Plugin{Id:"chushou.plugin",
-			Md5:Chushou_1515_md5,
+		//var plugin_chushou_1515 = Plugin{Id:"chushou.plugin",
+		//	Md5:Chushou_1515_md5,
+		//	Cp:ChuShou,
+		//	Url:Chushou_1515_url}
+		//var plugin_fengxing_1515 = Plugin{Id:"fengxing.plugin",
+		//	Md5:Fengxing_1515_md5,
+		//	Cp:FengXing,
+		//	Url:Fengxing_1515_url}
+		//var plugin_renren_1515 = Plugin{Id:"renren.plugin",
+		//	Md5:Renren_1515_md5,
+		//	Cp:RenRen,
+		//	Url:Renren_1515_url}
+		//var plugin_yilan_1515 = Plugin{Id:"yilan.plugin",
+		//	Md5:Yilan_1515_md5,
+		//	Cp:YiLan,
+		//	Url:Yilan_1515_url}
+		//var plugin_fenghuang_1515 = Plugin{Id:"fenghuang.plugin",
+		//	Md5:Fenghuang_1515_md5,
+		//	Cp:FengHuang,
+		//	Url:Fenghuang_1515_url}
+		//////////////////////1515version//////////////////////
+		////////////////////1516version//////////////////////
+		var plugin_chushou_1516 = Plugin{Id:"chushou.plugin",
+			Md5:Chushou_1516_md5,
 			Cp:ChuShou,
-			Url:Chushou_1515_url}
-		var plugin_fengxing_1515 = Plugin{Id:"fengxing.plugin",
-			Md5:Fengxing_1515_md5,
+			Url:Chushou_1516_url}
+		var plugin_fengxing_1516 = Plugin{Id:"fengxing.plugin",
+			Md5:Fengxing_1516_md5,
 			Cp:FengXing,
-			Url:Fengxing_1515_url}
-		var plugin_renren_1515 = Plugin{Id:"renren.plugin",
-			Md5:Renren_1515_md5,
+			Url:Fengxing_1516_url}
+		var plugin_renren_1516 = Plugin{Id:"renren.plugin",
+			Md5:Renren_1516_md5,
 			Cp:RenRen,
-			Url:Renren_1515_url}
-		var plugin_yilan_1515 = Plugin{Id:"yilan.plugin",
-			Md5:Yilan_1515_md5,
+			Url:Renren_1516_url}
+		var plugin_yilan_1516 = Plugin{Id:"yilan.plugin",
+			Md5:Yilan_1516_md5,
 			Cp:YiLan,
-			Url:Yilan_1515_url}
-		var plugin_fenghuang_1515 = Plugin{Id:"fenghuang.plugin",
-			Md5:Fenghuang_1515_md5,
+			Url:Yilan_1516_url}
+		var plugin_fenghuang_1516 = Plugin{Id:"fenghuang.plugin",
+			Md5:Fenghuang_1516_md5,
 			Cp:FengHuang,
-			Url:Fenghuang_1515_url}
-		////////////////////1515version//////////////////////
+			Url:Fenghuang_1516_url}
+		////////////////////1516version//////////////////////
 
-		s = append(s, plugin_chushou_1515)
-		s = append(s, plugin_fengxing_1515)
-		s = append(s, plugin_renren_1515)
-		s = append(s, plugin_yilan_1515)
-		s = append(s, plugin_fenghuang_1515)
+		s = append(s, plugin_chushou_1516)
+		s = append(s, plugin_fengxing_1516)
+		s = append(s, plugin_renren_1516)
+		s = append(s, plugin_yilan_1516)
+		s = append(s, plugin_fenghuang_1516)
 
 		//var ret PluginResult
 		//ret.Plugins = s

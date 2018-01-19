@@ -1,5 +1,20 @@
 package main
 
+const Chushou_1516_md5 = "3c8ac59817cd3b320691fee9e1ae4a22"
+const Chushou_1516_url = "https://gist.github.com/liuchonghui/b9757b65748eb42548213ec7b9572116/raw/aaeeac027fdb3ced22b5fb26d70cb5697145aa9d/1.5_16.chushou.3c8ac59817cd3b320691fee9e1ae4a22.zip"
+
+const Fenghuang_1516_md5 = "bee02d88e618464ab1292d0448a292a8"
+const Fenghuang_1516_url = "https://gist.github.com/liuchonghui/b9757b65748eb42548213ec7b9572116/raw/aaeeac027fdb3ced22b5fb26d70cb5697145aa9d/1.5_16.fenghuang.bee02d88e618464ab1292d0448a292a8.zip"
+
+const Fengxing_1516_md5 = "493d89e948d3dc6c11e0a6af6d6e5c95"
+const Fengxing_1516_url = "https://gist.github.com/liuchonghui/b9757b65748eb42548213ec7b9572116/raw/aaeeac027fdb3ced22b5fb26d70cb5697145aa9d/1.5_16.fengxing.493d89e948d3dc6c11e0a6af6d6e5c95.zip"
+
+const Renren_1516_md5 = "90c0650f6566b29220b04af6b0dc446c"
+const Renren_1516_url = "https://gist.github.com/liuchonghui/b9757b65748eb42548213ec7b9572116/raw/aaeeac027fdb3ced22b5fb26d70cb5697145aa9d/1.5_16.renren.90c0650f6566b29220b04af6b0dc446c.zip"
+
+const Yilan_1516_md5 = "1c631ca2ce08dfbb63063490ba0ffce4"
+const Yilan_1516_url = "https://gist.github.com/liuchonghui/b9757b65748eb42548213ec7b9572116/raw/aaeeac027fdb3ced22b5fb26d70cb5697145aa9d/1.5_16.yilan.1c631ca2ce08dfbb63063490ba0ffce4.zip"
+
 const Chushou_1515_md5 = "e36da768bed9ea1c4a59aa56fedf262c"
 const Chushou_1515_url = "https://gist.github.com/liuchonghui/b9757b65748eb42548213ec7b9572116/raw/5beef5982a170f794cf7a10654ebddf38a604c37/1.5_15.chushou.e36da768bed9ea1c4a59aa56fedf262c.zip"
 
