@@ -1,19 +1,19 @@
 package main
 
-const Chushou_1617_md5 = "a84fa9b956b241e6a472baeec783d97f"
-const Chushou_1617_url = "https://gist.github.com/liuchonghui/b9757b65748eb42548213ec7b9572116/raw/1247fdcff91ba5044b4cf869535017433d444d95/1.6_17.chushou.a84fa9b956b241e6a472baeec783d97f.zip"
+const Chushou_1617_md5 = "b5a22a173cae2af2a5630014d7fd2555"
+const Chushou_1617_url = "https://gist.github.com/liuchonghui/b9757b65748eb42548213ec7b9572116/raw/00472391b34fc78d4ce8c593f9b0b530bc5ca5f6/1.6_17.chushou.b5a22a173cae2af2a5630014d7fd2555.zip"
 
-const Fenghuang_1617_md5 = "f1845806ea3fda2fa637efbfa353f9d4"
-const Fenghuang_1617_url = "https://gist.github.com/liuchonghui/b9757b65748eb42548213ec7b9572116/raw/1247fdcff91ba5044b4cf869535017433d444d95/1.6_17.fenghuang.f1845806ea3fda2fa637efbfa353f9d4.zip"
+const Fenghuang_1617_md5 = "01cbb17dcd6ef1ed8f068860c758ab12"
+const Fenghuang_1617_url = "https://gist.github.com/liuchonghui/b9757b65748eb42548213ec7b9572116/raw/00472391b34fc78d4ce8c593f9b0b530bc5ca5f6/1.6_17.fenghuang.01cbb17dcd6ef1ed8f068860c758ab12.zip"
 
-const Fengxing_1617_md5 = "c1a342d8123f07214b17b69faa0b7bd7"
-const Fengxing_1617_url = "https://gist.github.com/liuchonghui/b9757b65748eb42548213ec7b9572116/raw/1247fdcff91ba5044b4cf869535017433d444d95/1.6_17.fengxing.c1a342d8123f07214b17b69faa0b7bd7.zip"
+const Fengxing_1617_md5 = "fed0e613952bf8a144e9285964f9c4ca"
+const Fengxing_1617_url = "https://gist.github.com/liuchonghui/b9757b65748eb42548213ec7b9572116/raw/00472391b34fc78d4ce8c593f9b0b530bc5ca5f6/1.6_17.fengxing.fed0e613952bf8a144e9285964f9c4ca.zip"
 
-const Renren_1617_md5 = "a7dc3f82a05f6aa6e244341832652b7e"
-const Renren_1617_url = "https://gist.github.com/liuchonghui/b9757b65748eb42548213ec7b9572116/raw/1247fdcff91ba5044b4cf869535017433d444d95/1.6_17.renren.a7dc3f82a05f6aa6e244341832652b7e.zip"
+const Renren_1617_md5 = "9d3d79c3e9919eb33f0af8fd99e2ecda"
+const Renren_1617_url = "https://gist.github.com/liuchonghui/b9757b65748eb42548213ec7b9572116/raw/00472391b34fc78d4ce8c593f9b0b530bc5ca5f6/1.6_17.renren.9d3d79c3e9919eb33f0af8fd99e2ecda.zip"
 
-const Yilan_1617_md5 = "aafd6807949e7a990a7ec746ad18251b"
-const Yilan_1617_url = "https://gist.github.com/liuchonghui/b9757b65748eb42548213ec7b9572116/raw/1247fdcff91ba5044b4cf869535017433d444d95/1.6_17.yilan.aafd6807949e7a990a7ec746ad18251b.zip"
+const Yilan_1617_md5 = "40f4b8584392af713aedd77993636296"
+const Yilan_1617_url = "https://gist.github.com/liuchonghui/b9757b65748eb42548213ec7b9572116/raw/00472391b34fc78d4ce8c593f9b0b530bc5ca5f6/1.6_17.yilan.40f4b8584392af713aedd77993636296.zip"
 
 const Chushou_1516_md5 = "3c8ac59817cd3b320691fee9e1ae4a22"
 const Chushou_1516_url = "https://gist.github.com/liuchonghui/b9757b65748eb42548213ec7b9572116/raw/aaeeac027fdb3ced22b5fb26d70cb5697145aa9d/1.5_16.chushou.3c8ac59817cd3b320691fee9e1ae4a22.zip"
