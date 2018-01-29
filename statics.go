@@ -6,8 +6,8 @@ const Chushou_1617_url = "https://gist.github.com/liuchonghui/b9757b65748eb42548
 const Fenghuang_1617_md5 = "01cbb17dcd6ef1ed8f068860c758ab12"
 const Fenghuang_1617_url = "https://gist.github.com/liuchonghui/b9757b65748eb42548213ec7b9572116/raw/00472391b34fc78d4ce8c593f9b0b530bc5ca5f6/1.6_17.fenghuang.01cbb17dcd6ef1ed8f068860c758ab12.zip"
 
-const Fengxing_1617_md5 = "fed0e613952bf8a144e9285964f9c4ca"
-const Fengxing_1617_url = "https://gist.github.com/liuchonghui/b9757b65748eb42548213ec7b9572116/raw/00472391b34fc78d4ce8c593f9b0b530bc5ca5f6/1.6_17.fengxing.fed0e613952bf8a144e9285964f9c4ca.zip"
+const Fengxing_1617_md5 = "a8a61ca611fc07cfba0e62bd716b2788"
+const Fengxing_1617_url = "https://gist.github.com/liuchonghui/b9757b65748eb42548213ec7b9572116/raw/f1585de303889c5ef87e0dde178d599ef30146d3/1.6_17.fengxing.a8a61ca611fc07cfba0e62bd716b2788.zip"
 
 const Renren_1617_md5 = "9d3d79c3e9919eb33f0af8fd99e2ecda"
 const Renren_1617_url = "https://gist.github.com/liuchonghui/b9757b65748eb42548213ec7b9572116/raw/00472391b34fc78d4ce8c593f9b0b530bc5ca5f6/1.6_17.renren.9d3d79c3e9919eb33f0af8fd99e2ecda.zip"
