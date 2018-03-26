@@ -1,5 +1,8 @@
 package main
 
+const Youku_1617_md5 = "55b1a8a01bfc3e75fd8c403100df943c"
+const Youku_1617_url = "https://gist.github.com/liuchonghui/b9757b65748eb42548213ec7b9572116/raw/c48862cbcd7643d01cf53ef08ca50e29924e04bd/1.6_17.youku.55b1a8a01bfc3e75fd8c403100df943c.zip"
+
 const Chushou_1617_md5 = "b5a22a173cae2af2a5630014d7fd2555"
 const Chushou_1617_url = "https://gist.github.com/liuchonghui/b9757b65748eb42548213ec7b9572116/raw/00472391b34fc78d4ce8c593f9b0b530bc5ca5f6/1.6_17.chushou.b5a22a173cae2af2a5630014d7fd2555.zip"
 
@@ -150,4 +153,5 @@ const (
     FengXing = "fs"
     YiLan = "yl"
     FengHuang = "fh"
+    YouKu = "yk"
 )
