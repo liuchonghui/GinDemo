@@ -1,5 +1,11 @@
 package main
 
+const Erlan_1618_md5 = "c3828bc73d98365a952eec9bfa88dbe4"
+const Erlan_1618_url = "https://gist.github.com/liuchonghui/b9757b65748eb42548213ec7b9572116/raw/f881bde67ca53735a91b493852b5dda63dd9c682/1.6_18.erlan.c3828bc73d98365a952eec9bfa88dbe4.zip"
+
+const Youku_1618_md5 = "d1108096a72d07884ba5632b5bf0f73c"
+const Youku_1618_url = "https://gist.github.com/liuchonghui/b9757b65748eb42548213ec7b9572116/raw/f881bde67ca53735a91b493852b5dda63dd9c682/1.6_18.youku.d1108096a72d07884ba5632b5bf0f73c.zip"
+
 const Youku_1617_md5 = "55b1a8a01bfc3e75fd8c403100df943c"
 const Youku_1617_url = "https://gist.github.com/liuchonghui/b9757b65748eb42548213ec7b9572116/raw/c48862cbcd7643d01cf53ef08ca50e29924e04bd/1.6_17.youku.55b1a8a01bfc3e75fd8c403100df943c.zip"
 
@@ -152,6 +158,7 @@ const (
     RenRen = "rr"
     FengXing = "fs"
     YiLan = "yl"
+	ErLan = "el"
     FengHuang = "fh"
     YouKu = "yk"
 )
