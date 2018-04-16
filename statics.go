@@ -1,5 +1,8 @@
 package main
 
+const Bobo_1618_md5 = "a1689d3023c8cdccc57d463873f55ac3"
+const Bobo_1618_url = "https://gist.github.com/liuchonghui/b9757b65748eb42548213ec7b9572116/raw/1c15ddac34c228f343daef7fbec98560f5bdb1d7/1.6_18.bobo.a1689d3023c8cdccc57d463873f55ac3.zip"
+
 const Erlan_1618_md5 = "c3828bc73d98365a952eec9bfa88dbe4"
 const Erlan_1618_url = "https://gist.github.com/liuchonghui/b9757b65748eb42548213ec7b9572116/raw/f881bde67ca53735a91b493852b5dda63dd9c682/1.6_18.erlan.c3828bc73d98365a952eec9bfa88dbe4.zip"
 
@@ -161,4 +164,5 @@ const (
 	ErLan = "el"
     FengHuang = "fh"
     YouKu = "yk"
+    BoBo = "cy"
 )
