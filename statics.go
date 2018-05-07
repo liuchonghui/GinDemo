@@ -1,5 +1,11 @@
 package main
 
+const Bobo_1620_md5 = "0c3607dcac07e3f64541bdda58358b4f"
+const Bobo_1620_url = "https://gist.github.com/liuchonghui/b9757b65748eb42548213ec7b9572116/raw/5c236aecbae3006700e6a98336818bcab2cca265/1.6_20.bobo.0c3607dcac07e3f64541bdda58358b4f.zip"
+
+const Bobo_1619_md5 = "436eeb0700a2759765813e3a324e789b"
+const Bobo_1619_url = "https://gist.github.com/liuchonghui/b9757b65748eb42548213ec7b9572116/raw/5856b6ab319c221ae86be3c05ef6e0e3dba3ff1c/1.6_19.bobo.436eeb0700a2759765813e3a324e789b.zip"
+
 const Bobo_1618_md5 = "a1689d3023c8cdccc57d463873f55ac3"
 const Bobo_1618_url = "https://gist.github.com/liuchonghui/b9757b65748eb42548213ec7b9572116/raw/1c15ddac34c228f343daef7fbec98560f5bdb1d7/1.6_18.bobo.a1689d3023c8cdccc57d463873f55ac3.zip"
 

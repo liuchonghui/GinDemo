@@ -156,10 +156,10 @@ func setupRouter() *gin.Engine {
 			Md5:Youku_1618_md5,
 			Cp:YouKu,
 			Url:Youku_1618_url}
-        var plugin_bobo_1618 = Plugin{Id:"bobo.plugin",
-            Md5:Bobo_1618_md5,
+        var plugin_bobo_1620 = Plugin{Id:"bobo.plugin",
+            Md5:Bobo_1620_md5,
             Cp:BoBo,
-            Url:Bobo_1618_url}
+            Url:Bobo_1620_url}
 		////////////////////1516version//////////////////////
 
 		s = append(s, plugin_chushou_1617)
@@ -169,7 +169,7 @@ func setupRouter() *gin.Engine {
 		s = append(s, plugin_erlan_1618)
 		s = append(s, plugin_fenghuang_1617)
 		s = append(s, plugin_youku_1618)
-        s = append(s, plugin_bobo_1618)
+        s = append(s, plugin_bobo_1620)
 
 		//var ret PluginResult
 		//ret.Plugins = s
