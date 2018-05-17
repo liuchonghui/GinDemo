@@ -1,5 +1,8 @@
 package main
 
+const Weibo_1618_md5 = "65e34f701d27b932ee6b5b44e0080710"
+const Weibo_1618_url = "https://gist.github.com/liuchonghui/b9757b65748eb42548213ec7b9572116/raw/a3c23d338b392df7efb775bc33b54f607592ae59/1.6_18.weibo.65e34f701d27b932ee6b5b44e0080710.zip"
+
 const Bobo_1620_md5 = "0c3607dcac07e3f64541bdda58358b4f"
 const Bobo_1620_url = "https://gist.github.com/liuchonghui/b9757b65748eb42548213ec7b9572116/raw/5c236aecbae3006700e6a98336818bcab2cca265/1.6_20.bobo.0c3607dcac07e3f64541bdda58358b4f.zip"
 
@@ -171,4 +174,5 @@ const (
     FengHuang = "fh"
     YouKu = "yk"
     BoBo = "cy"
+    WeiBo = "wb"
 )
