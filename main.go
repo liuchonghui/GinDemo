@@ -18,6 +18,22 @@ func setupRouter() *gin.Engine {
 		c.String(200, "pong")
 	})
 
+	r.GET("/urlscheme", func(c *gin.Context) {
+		var s []Plugin
+		var plugin_urlscheme = Plugin{Id:"android.test.urlscheme",
+			Md5:"8968fb1fc74ae2e4c7441bb00e7a00fa",
+			Cp:"us",
+			Url:"https://gist.github.com/liuchonghui/b9757b65748eb42548213ec7b9572116/raw/f52a6078d1a6d8a0a8e8ad8ffda4b3c53e213811/urlscheme.8968fb1fc74ae2e4c7441bb00e7a00fa.apk"}
+		s = append(s, plugin_urlscheme)
+
+		var data Data
+		data.Result = "success"
+		data.Plugins = s
+		var fp FetchPluginResult
+		fp.Content = data
+		c.JSON(http.StatusOK, fp)
+	})
+
 	//fmt.Println(AAA + AAA)
 
 	r.GET("/fetch_plugin", func(c *gin.Context) {
