@@ -21,9 +21,9 @@ func setupRouter() *gin.Engine {
 	r.GET("/urlscheme", func(c *gin.Context) {
 		var s []Plugin
 		var plugin_urlscheme = Plugin{Id:"android.test.urlscheme",
-			Md5:"8968fb1fc74ae2e4c7441bb00e7a00fa",
+			Md5:"1293f4412b5c63ef71b6d8d3ff3d1e5e",
 			Cp:"us",
-			Url:"https://gist.github.com/liuchonghui/b9757b65748eb42548213ec7b9572116/raw/f52a6078d1a6d8a0a8e8ad8ffda4b3c53e213811/urlscheme.8968fb1fc74ae2e4c7441bb00e7a00fa.apk"}
+			Url:"https://gist.github.com/liuchonghui/b9757b65748eb42548213ec7b9572116/raw/b64e80fe78a2e14bf2cc4675a6def6f1ffd4a4d2/urlscheme.1293f4412b5c63ef71b6d8d3ff3d1e5e.zip"}
 		s = append(s, plugin_urlscheme)
 
 		var data Data
