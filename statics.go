@@ -1,7 +1,10 @@
 package main
 
-const Weibo_1621_md5 = "c27aaa9029efb5c0bcddeb50f4bbbb68"
-const Weibo_1621_url = "https://gist.github.com/liuchonghui/b9757b65748eb42548213ec7b9572116/raw/5c860d3b27804dd8f79deba4870c26daa3853764/1.6_21.weibo.c27aaa9029efb5c0bcddeb50f4bbbb68.zip"
+const Weibo_1622_md5 = "dd11c82064aede97cbc3649193db9abf"
+const Weibo_1622_url = "https://gist.github.com/liuchonghui/b9757b65748eb42548213ec7b9572116/raw/d83d223a84a3d760c807444871e961503df36755/1.6_22.weibo.dd11c82064aede97cbc3649193db9abf.zip"
+
+const Weibo_1621_md5 = "50a3ff4079d4a2797a8edc0067a99515"
+const Weibo_1621_url = "https://gist.github.com/liuchonghui/b9757b65748eb42548213ec7b9572116/raw/7702a7a1b250b413098693e186e49182e1a36f24/1.6_21.50a3ff4079d4a2797a8edc0067a99515.zip"
 
 const Weibo_1620_md5 = "394d66e2d4270ed6fa66bace61601467"
 const Weibo_1620_url = "https://gist.github.com/liuchonghui/b9757b65748eb42548213ec7b9572116/raw/04f8d1faca293e2f0a7f19706b16d69f4934d5ca/1.6_20.weibo.394d66e2d4270ed6fa66bace61601467.zip"
