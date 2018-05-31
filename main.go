@@ -176,10 +176,10 @@ func setupRouter() *gin.Engine {
             Md5:Bobo_1620_md5,
             Cp:BoBo,
             Url:Bobo_1620_url}
-        var plugin_weibo_1622 = Plugin{Id:"cp.weibo.plugin",
-            Md5:Weibo_1622_md5,
+        var plugin_weibo_1623 = Plugin{Id:"cp.weibo.plugin",
+            Md5:Weibo_1623_md5,
             Cp:WeiBo,
-            Url:Weibo_1622_url}
+            Url:Weibo_1623_url}
 		////////////////////1516version//////////////////////
 
 		s = append(s, plugin_chushou_1617)
@@ -190,7 +190,7 @@ func setupRouter() *gin.Engine {
 		s = append(s, plugin_fenghuang_1617)
 		s = append(s, plugin_youku_1618)
         s = append(s, plugin_bobo_1620)
-        s = append(s, plugin_weibo_1622)
+        s = append(s, plugin_weibo_1623)
 
 		//var ret PluginResult
 		//ret.Plugins = s
