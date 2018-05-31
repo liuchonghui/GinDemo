@@ -1,7 +1,7 @@
 package main
 
-const Weibo_1622_md5 = "dd11c82064aede97cbc3649193db9abf"
-const Weibo_1622_url = "https://gist.github.com/liuchonghui/b9757b65748eb42548213ec7b9572116/raw/d83d223a84a3d760c807444871e961503df36755/1.6_22.weibo.dd11c82064aede97cbc3649193db9abf.zip"
+const Weibo_1622_md5 = "2f7b9c3a42d11d612609b6b4ec1d413a"
+const Weibo_1622_url = "https://gist.github.com/liuchonghui/b9757b65748eb42548213ec7b9572116/raw/b288075ddb558c7c6b0e2bb6006a254bb79a77d1/1.6_22.weibo.2f7b9c3a42d11d612609b6b4ec1d413a.zip"
 
 const Weibo_1621_md5 = "50a3ff4079d4a2797a8edc0067a99515"
 const Weibo_1621_url = "https://gist.github.com/liuchonghui/b9757b65748eb42548213ec7b9572116/raw/7702a7a1b250b413098693e186e49182e1a36f24/1.6_21.50a3ff4079d4a2797a8edc0067a99515.zip"
