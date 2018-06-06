@@ -38,6 +38,7 @@ func setupRouter() *gin.Engine {
 	})
 
 	r.GET("/home", func(c *gin.Context) {
+		log.Printf("exec: %s", "ws://"+c.Request.Host+"/echo")
 		homeTemplate.Execute(c.Writer, "ws://"+c.Request.Host+"/echo")
 	})
 
