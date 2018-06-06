@@ -41,15 +41,45 @@ func setupRouter() *gin.Engine {
 		log.Printf("exec: %s", "ws://"+c.Request.Host+"/echo")
 		if c.Request.Host == "localhost:8080" {
 			log.Printf("localhost: %s", "ws://"+c.Request.Host+"/echo")
-			homeTemplate.Execute(c.Writer, "ws://"+c.Request.Host+"/echo")
+			err := homeTemplate.Execute(c.Writer, "ws://"+c.Request.Host+"/echo")
+			if err != nil {
+				log.Print("upgrade:", err)
+			}
 		} else {
 			log.Printf("127.0.0.1: %s", "ws://"+c.Request.Host+"/g/echo")
-			homeTemplate.Execute(c.Writer, "ws://"+c.Request.Host+"/g/echo")
+			err := homeTemplate.Execute(c.Writer, "ws://"+c.Request.Host+"/g/echo")
+			if err != nil {
+				log.Print("upgrade:", err)
+			}
 		}
 
 	})
 
 	r.GET("/echo", func(a *gin.Context) {
+		log.Printf(">>>>>>>>>>/echo")
+		c, err := upgrader.Upgrade(a.Writer, a.Request, nil)
+		if err != nil {
+			log.Print("upgrade:", err)
+			return
+		}
+		defer c.Close()
+		for {
+			mt, message, err := c.ReadMessage()
+			if err != nil {
+				log.Println("read:", err)
+				break
+			}
+			log.Printf("recv: %s", message)
+			err = c.WriteMessage(mt, message)
+			if err != nil {
+				log.Println("write:", err)
+				break
+			}
+		}
+	})
+
+	r.GET("/g/echo", func(a *gin.Context) {
+		log.Printf(">>>>>>>>>>/g/echo")
 		c, err := upgrader.Upgrade(a.Writer, a.Request, nil)
 		if err != nil {
 			log.Print("upgrade:", err)
