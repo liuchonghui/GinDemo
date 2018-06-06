@@ -39,7 +39,14 @@ func setupRouter() *gin.Engine {
 
 	r.GET("/home", func(c *gin.Context) {
 		log.Printf("exec: %s", "ws://"+c.Request.Host+"/echo")
-		homeTemplate.Execute(c.Writer, "ws://"+c.Request.Host+"/echo")
+		if c.Request.Host == "localhost:8080" {
+			log.Printf("localhost: %s", "ws://"+c.Request.Host+"/echo")
+			homeTemplate.Execute(c.Writer, "ws://"+c.Request.Host+"/echo")
+		} else {
+			log.Printf("127.0.0.1: %s", "ws://"+c.Request.Host+"/g/echo")
+			homeTemplate.Execute(c.Writer, "ws://"+c.Request.Host+"/g/echo")
+		}
+
 	})
 
 	r.GET("/echo", func(a *gin.Context) {
