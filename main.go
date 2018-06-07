@@ -46,8 +46,8 @@ func setupRouter() *gin.Engine {
 				log.Print("upgrade:", err)
 			}
 		} else {
-			log.Printf("127.0.0.1: %s", "ws://"+c.Request.Host+"/g/echo")
-			err := homeTemplate.Execute(c.Writer, "ws://"+c.Request.Host+"/g/echo")
+			log.Printf("127.0.0.1: %s", "ws://45.32.40.65:8080/echo")
+			err := homeTemplate.Execute(c.Writer, "ws://45.32.40.65:8080/echo")
 			if err != nil {
 				log.Print("upgrade:", err)
 			}
@@ -346,7 +346,11 @@ type Data struct {
 	Plugins []Plugin `json:"cp_plugin"`
 }
 
-var upgrader = websocket.Upgrader{}
+var upgrader = websocket.Upgrader{
+	CheckOrigin: func(r *http.Request) bool {
+		return true
+	},
+}
 
 var homeTemplate = template.Must(template.New("").Parse(`
 <!DOCTYPE html>
