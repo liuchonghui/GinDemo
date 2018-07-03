@@ -211,53 +211,91 @@ func setupRouter() *gin.Engine {
 		//	Url:Fenghuang_1516_url}
 		////////////////////1516version//////////////////////
 		////////////////////1516version//////////////////////
-		var plugin_chushou_1617 = Plugin{Id:"chushou.plugin",
-			Md5:Chushou_1617_md5,
-			Cp:ChuShou,
-			Url:Chushou_1617_url}
-		var plugin_fengxing_1617 = Plugin{Id:"fengxing.plugin",
-			Md5:Fengxing_1617_md5,
-			Cp:FengXing,
-			Url:Fengxing_1617_url}
-		var plugin_renren_1617 = Plugin{Id:"renren.plugin",
-			Md5:Renren_1617_md5,
-			Cp:RenRen,
-			Url:Renren_1617_url}
-		var plugin_yilan_1617 = Plugin{Id:"yilan.plugin",
-			Md5:Yilan_1617_md5,
-			Cp:YiLan,
-			Url:Yilan_1617_url}
-        var plugin_erlan_1618 = Plugin{Id:"erlan.plugin",
-            Md5:Erlan_1618_md5,
-            Cp:ErLan,
-            Url:Erlan_1618_url}
-		var plugin_fenghuang_1617 = Plugin{Id:"fenghuang.plugin",
-			Md5:Fenghuang_1617_md5,
-			Cp:FengHuang,
-			Url:Fenghuang_1617_url}
-		var plugin_youku_1618 = Plugin{Id:"youku.plugin",
-			Md5:Youku_1618_md5,
-			Cp:YouKu,
-			Url:Youku_1618_url}
-        var plugin_bobo_1620 = Plugin{Id:"bobo.plugin",
-            Md5:Bobo_1620_md5,
-            Cp:BoBo,
-            Url:Bobo_1620_url}
-        var plugin_weibo_1624 = Plugin{Id:"cp.weibo.plugin",
-            Md5:Weibo_1624_md5,
-            Cp:WeiBo,
-            Url:Weibo_1624_url}
+		//var plugin_chushou_1617 = Plugin{Id:"chushou.plugin",
+		//	Md5:Chushou_1617_md5,
+		//	Cp:ChuShou,
+		//	Url:Chushou_1617_url}
+		//var plugin_fengxing_1617 = Plugin{Id:"fengxing.plugin",
+		//	Md5:Fengxing_1617_md5,
+		//	Cp:FengXing,
+		//	Url:Fengxing_1617_url}
+		//var plugin_renren_1617 = Plugin{Id:"renren.plugin",
+		//	Md5:Renren_1617_md5,
+		//	Cp:RenRen,
+		//	Url:Renren_1617_url}
+		//var plugin_yilan_1617 = Plugin{Id:"yilan.plugin",
+		//	Md5:Yilan_1617_md5,
+		//	Cp:YiLan,
+		//	Url:Yilan_1617_url}
+        //var plugin_erlan_1618 = Plugin{Id:"erlan.plugin",
+        //    Md5:Erlan_1618_md5,
+        //    Cp:ErLan,
+        //    Url:Erlan_1618_url}
+		//var plugin_fenghuang_1617 = Plugin{Id:"fenghuang.plugin",
+		//	Md5:Fenghuang_1617_md5,
+		//	Cp:FengHuang,
+		//	Url:Fenghuang_1617_url}
+		//var plugin_youku_1618 = Plugin{Id:"youku.plugin",
+		//	Md5:Youku_1618_md5,
+		//	Cp:YouKu,
+		//	Url:Youku_1618_url}
+        //var plugin_bobo_1620 = Plugin{Id:"bobo.plugin",
+        //    Md5:Bobo_1620_md5,
+        //    Cp:BoBo,
+        //    Url:Bobo_1620_url}
+        //var plugin_weibo_1624 = Plugin{Id:"cp.weibo.plugin",
+        //    Md5:Weibo_1624_md5,
+        //    Cp:WeiBo,
+        //    Url:Weibo_1624_url}
 		////////////////////1516version//////////////////////
+		////////////////////1625version//////////////////////
+		var plugin_chushou_1625 = Plugin{Id:"chushou.plugin",
+			Md5:Chushou_1625_md5,
+			Cp:ChuShou,
+			Url:Chushou_1625_url}
+		var plugin_fengxing_1625 = Plugin{Id:"fengxing.plugin",
+			Md5:Fengxing_1625_md5,
+			Cp:FengXing,
+			Url:Fengxing_1625_url}
+		var plugin_renren_1625 = Plugin{Id:"renren.plugin",
+			Md5:Renren_1625_md5,
+			Cp:RenRen,
+			Url:Renren_1625_url}
+		var plugin_yilan_1625 = Plugin{Id:"yilan.plugin",
+			Md5:Yilan_1625_md5,
+			Cp:YiLan,
+			Url:Yilan_1625_url}
+		var plugin_erlan_1625 = Plugin{Id:"erlan.plugin",
+			Md5:Erlan_1625_md5,
+			Cp:ErLan,
+			Url:Erlan_1625_url}
+		var plugin_fenghuang_1625 = Plugin{Id:"fenghuang.plugin",
+			Md5:Fenghuang_1625_md5,
+			Cp:FengHuang,
+			Url:Fenghuang_1625_url}
+		var plugin_youku_1625 = Plugin{Id:"youku.plugin",
+			Md5:Youku_1625_md5,
+			Cp:YouKu,
+			Url:Youku_1625_url}
+		var plugin_bobo_1625 = Plugin{Id:"bobo.plugin",
+			Md5:Bobo_1625_md5,
+			Cp:BoBo,
+			Url:Bobo_1625_url}
+		var plugin_weibo_1625 = Plugin{Id:"cp.weibo.plugin",
+			Md5:Weibo_1625_md5,
+			Cp:WeiBo,
+			Url:Weibo_1625_url}
+		////////////////////1625version//////////////////////
 
-		s = append(s, plugin_chushou_1617)
-		s = append(s, plugin_fengxing_1617)
-		s = append(s, plugin_renren_1617)
-		s = append(s, plugin_yilan_1617)
-		s = append(s, plugin_erlan_1618)
-		s = append(s, plugin_fenghuang_1617)
-		s = append(s, plugin_youku_1618)
-        s = append(s, plugin_bobo_1620)
-        s = append(s, plugin_weibo_1624)
+		s = append(s, plugin_chushou_1625)
+		s = append(s, plugin_fengxing_1625)
+		s = append(s, plugin_renren_1625)
+		s = append(s, plugin_yilan_1625)
+		s = append(s, plugin_erlan_1625)
+		s = append(s, plugin_fenghuang_1625)
+		s = append(s, plugin_youku_1625)
+		s = append(s, plugin_bobo_1625)
+		s = append(s, plugin_weibo_1625)
 
 		//var ret PluginResult
 		//ret.Plugins = s
