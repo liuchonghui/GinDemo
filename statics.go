@@ -1,5 +1,14 @@
 package main
 
+const Huashu_1625_md5 = "6f619ec702eff01d488f399d786954c4"
+const Huashu_1625_url = "https://gist.github.com/liuchonghui/b9757b65748eb42548213ec7b9572116/raw/175a6faa61cfaa6eb76136dfaa5d20d0c64b8e0e/1.6_25.huashu.6f619ec702eff01d488f399d786954c4.zip"
+
+const Fenghuang_1626_md5 = "7b63cd2575f5ed1e6d36c34682f9bdb2"
+const Fenghuang_1626_url = "https://gist.github.com/liuchonghui/b9757b65748eb42548213ec7b9572116/raw/175a6faa61cfaa6eb76136dfaa5d20d0c64b8e0e/1.6_26.fenghuang.7b63cd2575f5ed1e6d36c34682f9bdb2.zip"
+
+const Bobo_1626_md5 = "810f15fc8a3edc5d7ff1a4339f1289a6"
+const Bobo_1626_url = "https://gist.github.com/liuchonghui/b9757b65748eb42548213ec7b9572116/raw/175a6faa61cfaa6eb76136dfaa5d20d0c64b8e0e/1.6_26.bobo.810f15fc8a3edc5d7ff1a4339f1289a6.zip"
+
 const Bobo_1625_md5 = "d8ee6257df8132921f4902761e141c47"
 const Bobo_1625_url = "https://gist.github.com/liuchonghui/b9757b65748eb42548213ec7b9572116/raw/3806eb424550b62d39527cb649195a16936bbad8/1.6_25.bobo.d8ee6257df8132921f4902761e141c47.zip"
 
@@ -217,4 +226,5 @@ const (
     YouKu = "yk"
     BoBo = "cy"
     WeiBo = "wb"
+    HuaShu = "hs"
 )

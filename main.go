@@ -269,22 +269,26 @@ func setupRouter() *gin.Engine {
 			Md5:Erlan_1625_md5,
 			Cp:ErLan,
 			Url:Erlan_1625_url}
-		var plugin_fenghuang_1625 = Plugin{Id:"fenghuang.plugin",
-			Md5:Fenghuang_1625_md5,
+		var plugin_fenghuang_1626 = Plugin{Id:"fenghuang.plugin",
+			Md5:Fenghuang_1626_md5,
 			Cp:FengHuang,
-			Url:Fenghuang_1625_url}
+			Url:Fenghuang_1626_url}
 		var plugin_youku_1625 = Plugin{Id:"youku.plugin",
 			Md5:Youku_1625_md5,
 			Cp:YouKu,
 			Url:Youku_1625_url}
-		var plugin_bobo_1625 = Plugin{Id:"bobo.plugin",
-			Md5:Bobo_1625_md5,
+		var plugin_bobo_1626 = Plugin{Id:"bobo.plugin",
+			Md5:Bobo_1626_md5,
 			Cp:BoBo,
-			Url:Bobo_1625_url}
+			Url:Bobo_1626_url}
 		var plugin_weibo_1625 = Plugin{Id:"cp.weibo.plugin",
 			Md5:Weibo_1625_md5,
 			Cp:WeiBo,
 			Url:Weibo_1625_url}
+		var plugin_huashu_1625 = Plugin{Id:"cp.huashu.plugin",
+			Md5:Huashu_1625_md5,
+			Cp:HuaShu,
+			Url:Huashu_1625_url}
 		////////////////////1625version//////////////////////
 
 		s = append(s, plugin_chushou_1625)
@@ -292,10 +296,11 @@ func setupRouter() *gin.Engine {
 		s = append(s, plugin_renren_1625)
 		s = append(s, plugin_yilan_1625)
 		s = append(s, plugin_erlan_1625)
-		s = append(s, plugin_fenghuang_1625)
+		s = append(s, plugin_fenghuang_1626)
 		s = append(s, plugin_youku_1625)
-		s = append(s, plugin_bobo_1625)
+		s = append(s, plugin_bobo_1626)
 		s = append(s, plugin_weibo_1625)
+		s = append(s, plugin_huashu_1625)
 
 		//var ret PluginResult
 		//ret.Plugins = s
