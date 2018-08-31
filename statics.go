@@ -228,3 +228,11 @@ const (
     WeiBo = "wb"
     HuaShu = "hs"
 )
+
+const Qingting_101_md5 = "4aa16a9ab644b399d157c45fc5edf9ab"
+const Qingting_101_url = "https://gist.github.com/liuchonghui/b9757b65748eb42548213ec7b9572116/raw/20aa7735be8a31156570ea92cd5529945d5ab044/qingting.1.0_1.4aa16a9ab644b399d157c45fc5edf9ab.zip"
+
+const (
+    QingTing = "qt"
+)
+

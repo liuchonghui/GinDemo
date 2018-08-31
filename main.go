@@ -106,148 +106,7 @@ func setupRouter() *gin.Engine {
 	r.GET("/fetch_plugin", func(c *gin.Context) {
 		ver := c.DefaultQuery("ver", "N/A")
 		fmt.Println("ver is " + ver)
-		//c.JSON(200, gin.H{"id": ch, "state": "success", "md5": "819f24d8d44fb678e0b4c5cbfe3aca68", "url": "https://gist.github.com/liuchonghui/d671bb312dceb6540e8987578f09e3b1/raw/7ff6ea477d81e044f0eb100c2da14ddbbaf94457/chushou.plugin.pl.apk"})
 		var s []Plugin
-		////////////////////134version//////////////////////
-		//var plugin_chushou_134 = Plugin{Id:"chushou.plugin",
-		//	Md5:Chushou_134_md5,
-		//	Cp:ChuShou,
-		//	Url:Chushou_134_url}
-		//var plugin_fengxing_134 = Plugin{Id:"fengxing.plugin",
-		//	Md5:Fengxing_134_md5,
-		//	Cp:FengXing,
-		//	Url:Fengxing_134_url}
-		//var plugin_renren_134 = Plugin{Id:"renren.plugin",
-		//	Md5:Renren_134_md5,
-		//	Cp:RenRen,
-		//	Url:Renren_134_url}
-		//var plugin_yilan_135 = Plugin{Id:"yilan.plugin",
-		//	Md5:Yilan_135_md5,
-		//	Cp:YiLan,
-		//	Url:Yilan_135_url}
-		////////////////////134version//////////////////////
-		////////////////////146version//////////////////////
-		//var plugin_chushou_146 = Plugin{Id:"chushou.plugin",
-		//	Md5:Chushou_146_md5,
-		//	Cp:ChuShou,
-		//	Url:Chushou_146_url}
-		//var plugin_fengxing_146 = Plugin{Id:"fengxing.plugin",
-		//	Md5:Fengxing_146_md5,
-		//	Cp:FengXing,
-		//	Url:Fengxing_146_url}
-		//var plugin_renren_146 = Plugin{Id:"renren.plugin",
-		//	Md5:Renren_146_md5,
-		//	Cp:RenRen,
-		//	Url:Renren_146_url}
-		//var plugin_yilan_146 = Plugin{Id:"yilan.plugin",
-		//	Md5:Yilan_146_md5,
-		//	Cp:YiLan,
-		//	Url:Yilan_146_url}
-		////////////////////146version//////////////////////
-		////////////////////158version//////////////////////
-		//var plugin_chushou_158 = Plugin{Id:"chushou.plugin",
-		//	Md5:Chushou_158_md5,
-		//	Cp:ChuShou,
-		//	Url:Chushou_158_url}
-		//var plugin_fengxing_158 = Plugin{Id:"fengxing.plugin",
-		//	Md5:Fengxing_158_md5,
-		//	Cp:FengXing,
-		//	Url:Fengxing_158_url}
-		//var plugin_renren_158 = Plugin{Id:"renren.plugin",
-		//	Md5:Renren_158_md5,
-		//	Cp:RenRen,
-		//	Url:Renren_158_url}
-		//var plugin_yilan_158 = Plugin{Id:"yilan.plugin",
-		//	Md5:Yilan_158_md5,
-		//	Cp:YiLan,
-		//	Url:Yilan_158_url}
-		//var plugin_fenghuang_158 = Plugin{Id:"fenghuang.plugin",
-		//	Md5:Fenghuang_158_md5,
-		//	Cp:FengHuang,
-		//	Url:Fenghuang_158_url}
-		////////////////////158version//////////////////////
-		////////////////////1515version//////////////////////
-		//var plugin_chushou_1515 = Plugin{Id:"chushou.plugin",
-		//	Md5:Chushou_1515_md5,
-		//	Cp:ChuShou,
-		//	Url:Chushou_1515_url}
-		//var plugin_fengxing_1515 = Plugin{Id:"fengxing.plugin",
-		//	Md5:Fengxing_1515_md5,
-		//	Cp:FengXing,
-		//	Url:Fengxing_1515_url}
-		//var plugin_renren_1515 = Plugin{Id:"renren.plugin",
-		//	Md5:Renren_1515_md5,
-		//	Cp:RenRen,
-		//	Url:Renren_1515_url}
-		//var plugin_yilan_1515 = Plugin{Id:"yilan.plugin",
-		//	Md5:Yilan_1515_md5,
-		//	Cp:YiLan,
-		//	Url:Yilan_1515_url}
-		//var plugin_fenghuang_1515 = Plugin{Id:"fenghuang.plugin",
-		//	Md5:Fenghuang_1515_md5,
-		//	Cp:FengHuang,
-		//	Url:Fenghuang_1515_url}
-		//////////////////////1515version//////////////////////
-		////////////////////1516version//////////////////////
-		//var plugin_chushou_1516 = Plugin{Id:"chushou.plugin",
-		//	Md5:Chushou_1516_md5,
-		//	Cp:ChuShou,
-		//	Url:Chushou_1516_url}
-		//var plugin_fengxing_1516 = Plugin{Id:"fengxing.plugin",
-		//	Md5:Fengxing_1516_md5,
-		//	Cp:FengXing,
-		//	Url:Fengxing_1516_url}
-		//var plugin_renren_1516 = Plugin{Id:"renren.plugin",
-		//	Md5:Renren_1516_md5,
-		//	Cp:RenRen,
-		//	Url:Renren_1516_url}
-		//var plugin_yilan_1516 = Plugin{Id:"yilan.plugin",
-		//	Md5:Yilan_1516_md5,
-		//	Cp:YiLan,
-		//	Url:Yilan_1516_url}
-		//var plugin_fenghuang_1516 = Plugin{Id:"fenghuang.plugin",
-		//	Md5:Fenghuang_1516_md5,
-		//	Cp:FengHuang,
-		//	Url:Fenghuang_1516_url}
-		////////////////////1516version//////////////////////
-		////////////////////1516version//////////////////////
-		//var plugin_chushou_1617 = Plugin{Id:"chushou.plugin",
-		//	Md5:Chushou_1617_md5,
-		//	Cp:ChuShou,
-		//	Url:Chushou_1617_url}
-		//var plugin_fengxing_1617 = Plugin{Id:"fengxing.plugin",
-		//	Md5:Fengxing_1617_md5,
-		//	Cp:FengXing,
-		//	Url:Fengxing_1617_url}
-		//var plugin_renren_1617 = Plugin{Id:"renren.plugin",
-		//	Md5:Renren_1617_md5,
-		//	Cp:RenRen,
-		//	Url:Renren_1617_url}
-		//var plugin_yilan_1617 = Plugin{Id:"yilan.plugin",
-		//	Md5:Yilan_1617_md5,
-		//	Cp:YiLan,
-		//	Url:Yilan_1617_url}
-        //var plugin_erlan_1618 = Plugin{Id:"erlan.plugin",
-        //    Md5:Erlan_1618_md5,
-        //    Cp:ErLan,
-        //    Url:Erlan_1618_url}
-		//var plugin_fenghuang_1617 = Plugin{Id:"fenghuang.plugin",
-		//	Md5:Fenghuang_1617_md5,
-		//	Cp:FengHuang,
-		//	Url:Fenghuang_1617_url}
-		//var plugin_youku_1618 = Plugin{Id:"youku.plugin",
-		//	Md5:Youku_1618_md5,
-		//	Cp:YouKu,
-		//	Url:Youku_1618_url}
-        //var plugin_bobo_1620 = Plugin{Id:"bobo.plugin",
-        //    Md5:Bobo_1620_md5,
-        //    Cp:BoBo,
-        //    Url:Bobo_1620_url}
-        //var plugin_weibo_1624 = Plugin{Id:"cp.weibo.plugin",
-        //    Md5:Weibo_1624_md5,
-        //    Cp:WeiBo,
-        //    Url:Weibo_1624_url}
-		////////////////////1516version//////////////////////
 		////////////////////1625version//////////////////////
 		var plugin_chushou_1625 = Plugin{Id:"chushou.plugin",
 			Md5:Chushou_1625_md5,
@@ -302,9 +161,27 @@ func setupRouter() *gin.Engine {
 		s = append(s, plugin_weibo_1625)
 		s = append(s, plugin_huashu_1625)
 
-		//var ret PluginResult
-		//ret.Plugins = s
-		//ret.State = "success"
+		var data Data
+		data.Result = "success"
+		data.Plugins = s
+		var fp FetchPluginResult
+		fp.Content = data
+
+		c.JSON(http.StatusOK, fp)
+	})
+
+	r.GET("/fetch_fm_plugin", func(c *gin.Context) {
+		ver := c.DefaultQuery("ver", "N/A")
+		fmt.Println("ver is " + ver)
+		var s []Plugin
+		////////////////////101version//////////////////////
+		var plugin_qingting_101 = Plugin{Id:"cp.qingting.plugin",
+			Md5:Qingting_101_md5,
+			Cp:QingTing,
+			Url:Qingting_101_url}
+		////////////////////101version//////////////////////
+
+		s = append(s, plugin_qingting_101)
 
 		var data Data
 		data.Result = "success"
@@ -313,13 +190,6 @@ func setupRouter() *gin.Engine {
 		fp.Content = data
 
 		c.JSON(http.StatusOK, fp)
-		//b, err := json.Marshal(ret)
-		//if err != nil {
-		//	c.JSON(100, "{}")
-		//} else {
-		//	fmt.Println(string(b))
-		//	c.JSON(200, string(b))
-		//}
 	})
 
 	// Get user value
