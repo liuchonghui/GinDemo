@@ -1,5 +1,8 @@
 package main
 
+const Pptv_1625_md5 = "30884b2265d575e79a14c67e990d6c70"
+const Pptv_1625_url = "https://gist.github.com/liuchonghui/b9757b65748eb42548213ec7b9572116/raw/3868f5c03da3f094565b091d8703ff7ef69872cf/1.6_25.pptv.30884b2265d575e79a14c67e990d6c70.zip"
+
 const Huashu_1625_md5 = "6f619ec702eff01d488f399d786954c4"
 const Huashu_1625_url = "https://gist.github.com/liuchonghui/b9757b65748eb42548213ec7b9572116/raw/175a6faa61cfaa6eb76136dfaa5d20d0c64b8e0e/1.6_25.huashu.6f619ec702eff01d488f399d786954c4.zip"
 
@@ -227,6 +230,7 @@ const (
     BoBo = "cy"
     WeiBo = "wb"
     HuaShu = "hs"
+    PpTv = "pt"
 )
 
 const Qingting_101_md5 = "4aa16a9ab644b399d157c45fc5edf9ab"

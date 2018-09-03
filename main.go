@@ -148,6 +148,10 @@ func setupRouter() *gin.Engine {
 			Md5:Huashu_1625_md5,
 			Cp:HuaShu,
 			Url:Huashu_1625_url}
+		var plugin_pptv_1625 = Plugin{Id:"cp.pptv.plugin",
+			Md5:Pptv_1625_md5,
+			Cp:PpTv,
+			Url:Pptv_1625_url}
 		////////////////////1625version//////////////////////
 
 		s = append(s, plugin_chushou_1625)
@@ -160,6 +164,7 @@ func setupRouter() *gin.Engine {
 		s = append(s, plugin_bobo_1626)
 		s = append(s, plugin_weibo_1625)
 		s = append(s, plugin_huashu_1625)
+		s = append(s, plugin_pptv_1625)
 
 		var data Data
 		data.Result = "success"
