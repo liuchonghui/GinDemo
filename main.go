@@ -180,13 +180,13 @@ func setupRouter() *gin.Engine {
 		fmt.Println("ver is " + ver)
 		var s []Plugin
 		////////////////////101version//////////////////////
-		var plugin_qingting_101 = Plugin{Id:"cp.qingting.plugin",
-			Md5:Qingting_101_md5,
+		var plugin_qingting = Plugin{Id:"cp.qingting.plugin",
+			Md5:Qingting_112_md5,
 			Cp:QingTing,
-			Url:Qingting_101_url}
+			Url:Qingting_112_url}
 		////////////////////101version//////////////////////
 
-		s = append(s, plugin_qingting_101)
+		s = append(s, plugin_qingting)
 
 		var data Data
 		data.Result = "success"
