@@ -1,5 +1,8 @@
 package main
 
+const Weibo_1626_md5 = "5e0cb4e6d232becb024b2e8e8a24c2f1"
+const Weibo_1626_url = "https://gist.github.com/liuchonghui/b9757b65748eb42548213ec7b9572116/raw/103c45aad7361a600fbbdc4b5f1425cbd3ce5b01/1.6_26.weibo.5e0cb4e6d232becb024b2e8e8a24c2f1.zip"
+
 const Pptv_1625_md5 = "30884b2265d575e79a14c67e990d6c70"
 const Pptv_1625_url = "https://gist.github.com/liuchonghui/b9757b65748eb42548213ec7b9572116/raw/3868f5c03da3f094565b091d8703ff7ef69872cf/1.6_25.pptv.30884b2265d575e79a14c67e990d6c70.zip"
 
