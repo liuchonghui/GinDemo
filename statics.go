@@ -236,8 +236,8 @@ const (
     PpTv = "pt"
 )
 
-const Qingting_123_md5 = "af12679cc1835aea63709fc31965ca9d"
-const Qingting_134_url = "https://gist.github.com/liuchonghui/b9757b65748eb42548213ec7b9572116/raw/6bf01be26f1187712a76b54bde74eb9bf5fd9a40/1.3_4.qingting.af12679cc1835aea63709fc31965ca9d.zip"
+const Qingting_145_md5 = "4bbaf8865ebd405c86e8db6b4f0ba346"
+const Qingting_145_url = "https://gist.github.com/liuchonghui/b9757b65748eb42548213ec7b9572116/raw/54e039f003491e32d501c29f373dd3983f2ec403/1.4_5.qingting.4bbaf8865ebd405c86e8db6b4f0ba346.zip"
 
 const (
     QingTing = "qt"
