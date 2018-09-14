@@ -183,7 +183,7 @@ func setupRouter() *gin.Engine {
 		var plugin_qingting = Plugin{Id:"cp.qingtingfm.plugin",
 			Md5:Qingting_145_md5,
 			Cp:QingTing,
-			Url:Qingting_145_url}
+			Url:Qingting_156_url}
 		////////////////////101version//////////////////////
 
 		s = append(s, plugin_qingting)
