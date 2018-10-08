@@ -1,5 +1,8 @@
 package main
 
+const Fxpgc_1625_md5 = "0eee88f9af1ccdcba2c4a59beb305d85"
+const Fxpgc_1625_url = "https://gist.github.com/liuchonghui/b9757b65748eb42548213ec7b9572116/raw/e6279431d37f95df648f86c93a289f4c9a8975eb/1.6_25.fxpgc.0eee88f9af1ccdcba2c4a59beb305d85.zip"
+
 const Youku_1626_md5 = "e08bcfad20cde86444c38f77b572e38f"
 const Youku_1626_url = "https://gist.github.com/liuchonghui/b9757b65748eb42548213ec7b9572116/raw/fb5d5086c741f908ea6c8b2640e6723423434d3a/1.6_26.youku.e08bcfad20cde86444c38f77b572e38f.zip"
 
@@ -237,6 +240,7 @@ const (
     WeiBo = "wb"
     HuaShu = "hs"
     PpTv = "pt"
+    FxPgc = "fx"
 )
 
 const Qingting_189_md5 = "90ea62a033ea198580a47c1b98fa4c33"
