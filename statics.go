@@ -1,7 +1,10 @@
 package main
 
-const Fxpgc_1625_md5 = "0eee88f9af1ccdcba2c4a59beb305d85"
-const Fxpgc_1625_url = "https://gist.github.com/liuchonghui/b9757b65748eb42548213ec7b9572116/raw/e6279431d37f95df648f86c93a289f4c9a8975eb/1.6_25.fxpgc.0eee88f9af1ccdcba2c4a59beb305d85.zip"
+const Weibo_1627_md5 = "3a77d4c298953dece16c348db24d9f78"
+const Weibo_1627_url = "https://gist.github.com/liuchonghui/b9757b65748eb42548213ec7b9572116/raw/938faee9a72ccc18affcd10decb14ebf52b49d4f/1.6_27.weibo.3a77d4c298953dece16c348db24d9f78.zip"
+
+const Fxpgc_1625_md5 = "df190c6e19b976a625422a5c43b6f1e8"
+const Fxpgc_1625_url = "https://gist.github.com/liuchonghui/b9757b65748eb42548213ec7b9572116/raw/938faee9a72ccc18affcd10decb14ebf52b49d4f/1.6_25.fxpgc.df190c6e19b976a625422a5c43b6f1e8.zip"
 
 const Youku_1626_md5 = "e08bcfad20cde86444c38f77b572e38f"
 const Youku_1626_url = "https://gist.github.com/liuchonghui/b9757b65748eb42548213ec7b9572116/raw/fb5d5086c741f908ea6c8b2640e6723423434d3a/1.6_26.youku.e08bcfad20cde86444c38f77b572e38f.zip"
