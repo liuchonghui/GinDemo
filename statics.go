@@ -1,5 +1,8 @@
 package main
 
+const Pptv_1625_md5 = "db9357c67b82f2da0afc1e540549296c"
+const Pptv_1625_url = "https://gist.github.com/liuchonghui/b9757b65748eb42548213ec7b9572116/raw/c52b33e0768e6b2f3e0732ec0f4ac9759e4e366d/1.6_25.pptv.db9357c67b82f2da0afc1e540549296c.zip"
+
 const Weibo_1627_md5 = "3a77d4c298953dece16c348db24d9f78"
 const Weibo_1627_url = "https://gist.github.com/liuchonghui/b9757b65748eb42548213ec7b9572116/raw/938faee9a72ccc18affcd10decb14ebf52b49d4f/1.6_27.weibo.3a77d4c298953dece16c348db24d9f78.zip"
 
@@ -11,9 +14,6 @@ const Youku_1626_url = "https://gist.github.com/liuchonghui/b9757b65748eb4254821
 
 const Weibo_1626_md5 = "5e0cb4e6d232becb024b2e8e8a24c2f1"
 const Weibo_1626_url = "https://gist.github.com/liuchonghui/b9757b65748eb42548213ec7b9572116/raw/103c45aad7361a600fbbdc4b5f1425cbd3ce5b01/1.6_26.weibo.5e0cb4e6d232becb024b2e8e8a24c2f1.zip"
-
-const Pptv_1625_md5 = "30884b2265d575e79a14c67e990d6c70"
-const Pptv_1625_url = "https://gist.github.com/liuchonghui/b9757b65748eb42548213ec7b9572116/raw/3868f5c03da3f094565b091d8703ff7ef69872cf/1.6_25.pptv.30884b2265d575e79a14c67e990d6c70.zip"
 
 const Huashu_1625_md5 = "6f619ec702eff01d488f399d786954c4"
 const Huashu_1625_url = "https://gist.github.com/liuchonghui/b9757b65748eb42548213ec7b9572116/raw/175a6faa61cfaa6eb76136dfaa5d20d0c64b8e0e/1.6_25.huashu.6f619ec702eff01d488f399d786954c4.zip"
