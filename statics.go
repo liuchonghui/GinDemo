@@ -1,5 +1,8 @@
 package main
 
+const Fxpgc_1626_md5 = "ed1e17223066ab9669eb8336f0321a99"
+const Fxpgc_1626_url = "https://gist.github.com/liuchonghui/b9757b65748eb42548213ec7b9572116/raw/10aefe13499cafe3c92460dde3e024c75e01cd75/1.6_26.fxpgc.ed1e17223066ab9669eb8336f0321a99.zip"
+
 const Pptv_1625_md5 = "db9357c67b82f2da0afc1e540549296c"
 const Pptv_1625_url = "https://gist.github.com/liuchonghui/b9757b65748eb42548213ec7b9572116/raw/c52b33e0768e6b2f3e0732ec0f4ac9759e4e366d/1.6_25.pptv.db9357c67b82f2da0afc1e540549296c.zip"
 
