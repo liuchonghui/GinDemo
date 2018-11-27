@@ -108,10 +108,10 @@ func setupRouter() *gin.Engine {
 		fmt.Println("ver is " + ver)
 		var s []Plugin
 		////////////////////1625version//////////////////////
-		var plugin_chushou_1625 = Plugin{Id:"chushou.plugin",
-			Md5:Chushou_1625_md5,
+		var plugin_chushou_1626 = Plugin{Id:"chushou.plugin",
+			Md5:Chushou_1626_md5,
 			Cp:ChuShou,
-			Url:Chushou_1625_url}
+			Url:Chushou_1626_url}
 		var plugin_fengxing_1625 = Plugin{Id:"fengxing.plugin",
 			Md5:Fengxing_1625_md5,
 			Cp:FengXing,
@@ -140,25 +140,29 @@ func setupRouter() *gin.Engine {
 			Md5:Bobo_1626_md5,
 			Cp:BoBo,
 			Url:Bobo_1626_url}
-		var plugin_weibo_1627 = Plugin{Id:"cp.weibo.plugin",
-			Md5:Weibo_1627_md5,
+		var plugin_weibo_1628 = Plugin{Id:"cp.weibo.plugin",
+			Md5:Weibo_1628_md5,
 			Cp:WeiBo,
-			Url:Weibo_1627_url}
-		var plugin_huashu_1625 = Plugin{Id:"cp.huashu.plugin",
-			Md5:Huashu_1625_md5,
+			Url:Weibo_1628_url}
+		var plugin_huashu_1626 = Plugin{Id:"cp.huashu.plugin",
+			Md5:Huashu_1626_md5,
 			Cp:HuaShu,
-			Url:Huashu_1625_url}
+			Url:Huashu_1626_url}
 		var plugin_pptv_1625 = Plugin{Id:"cp.pptv.plugin",
 			Md5:Pptv_1625_md5,
 			Cp:PpTv,
 			Url:Pptv_1625_url}
-		var plugin_fxpgc_1626 = Plugin{Id:"fxpgc.plugin",
-			Md5:Fxpgc_1626_md5,
+		var plugin_fxpgc_1629 = Plugin{Id:"fxpgc.plugin",
+			Md5:Fxpgc_1629_md5,
 			Cp:FxPgc,
-			Url:Fxpgc_1626_url}
+			Url:Fxpgc_1629_url}
+        var plugin_mangguo_1626 = Plugin{Id:"mangguo.plugin",
+            Md5:Mangguo_1626_md5,
+            Cp:MangGuo,
+            Url:Mangguo_1626_url}
 		////////////////////1625version//////////////////////
 
-		s = append(s, plugin_chushou_1625)
+		s = append(s, plugin_chushou_1626)
 		s = append(s, plugin_fengxing_1625)
 		s = append(s, plugin_renren_1625)
 		s = append(s, plugin_yilan_1625)
@@ -166,10 +170,11 @@ func setupRouter() *gin.Engine {
 		s = append(s, plugin_fenghuang_1626)
 		s = append(s, plugin_youku_1626)
 		s = append(s, plugin_bobo_1626)
-		s = append(s, plugin_weibo_1627)
-		s = append(s, plugin_huashu_1625)
+		s = append(s, plugin_weibo_1628)
+		s = append(s, plugin_huashu_1626)
 		s = append(s, plugin_pptv_1625)
-		s = append(s, plugin_fxpgc_1626)
+		s = append(s, plugin_fxpgc_1629)
+        s = append(s, plugin_mangguo_1626)
 
 		var data Data
 		data.Result = "success"

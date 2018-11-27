@@ -1,5 +1,20 @@
 package main
 
+const Fxpgc_1629_md5 = "2dab693b3625c9d1135075802fbfc413"
+const Fxpgc_1629_url = "https://gist.github.com/liuchonghui/b9757b65748eb42548213ec7b9572116/raw/67eb87dfc73ddf7aa6597aca7f9ab9b35852c46e/1.6_29.fxpgc.2dab693b3625c9d1135075802fbfc413.zip"
+
+const Weibo_1628_md5 = "0d2558e2ac0a2a08e5a9c19821df8d1f"
+const Weibo_1628_url = "https://gist.github.com/liuchonghui/b9757b65748eb42548213ec7b9572116/raw/67eb87dfc73ddf7aa6597aca7f9ab9b35852c46e/1.6_28.weibo.0d2558e2ac0a2a08e5a9c19821df8d1f.zip"
+
+const Mangguo_1626_md5 = "1e601de0a1b5540e13cf770da2336900"
+const Mangguo_1626_url = "https://gist.github.com/liuchonghui/b9757b65748eb42548213ec7b9572116/raw/67eb87dfc73ddf7aa6597aca7f9ab9b35852c46e/1.6_26.mangguo.1e601de0a1b5540e13cf770da2336900.zip"
+
+const Huashu_1626_md5 = "0f796709c1088d8351320e4a1dfd58bc"
+const Huashu_1626_url = "https://gist.github.com/liuchonghui/b9757b65748eb42548213ec7b9572116/raw/67eb87dfc73ddf7aa6597aca7f9ab9b35852c46e/1.6_26.huashu.0f796709c1088d8351320e4a1dfd58bc.zip"
+
+const Chushou_1626_md5 = "698f848827051274eee456a788522bc2"
+const Chushou_1626_url = "https://gist.github.com/liuchonghui/b9757b65748eb42548213ec7b9572116/raw/67eb87dfc73ddf7aa6597aca7f9ab9b35852c46e/1.6_26.chushou.698f848827051274eee456a788522bc2.zip"
+
 const Fxpgc_1626_md5 = "ed1e17223066ab9669eb8336f0321a99"
 const Fxpgc_1626_url = "https://gist.github.com/liuchonghui/b9757b65748eb42548213ec7b9572116/raw/10aefe13499cafe3c92460dde3e024c75e01cd75/1.6_26.fxpgc.ed1e17223066ab9669eb8336f0321a99.zip"
 
@@ -247,6 +262,7 @@ const (
     HuaShu = "hs"
     PpTv = "pt"
     FxPgc = "fx"
+    MangGuo = "mg"
 )
 
 const Qingting_189_md5 = "90ea62a033ea198580a47c1b98fa4c33"
