@@ -37,6 +37,37 @@ func setupRouter() *gin.Engine {
 		c.JSON(http.StatusOK, fp)
 	})
 
+	//r.POST("/bot617804206", func(c *gin.Context) {
+	//	log.Printf("post /bot617804206 here:")
+	//	var person Person
+	//	if c.Bind(&person) == nil {
+	//		log.Printf(person.Name)
+	//		log.Printf(person.Address)
+	//	}
+	//	c.String(200, "success")
+	//})
+	r.POST("/bot617804206", func(c *gin.Context) {
+		log.Printf("post /bot617804206 here:")
+		var tele Telegram
+		if c.BindJSON(&tele) == nil {
+			log.Printf("update_id: %d", tele.UpdateId)
+			log.Printf("message-date: %d", tele.Content.Date)
+			log.Printf("message-message_id: %d", tele.Content.MessageId)
+			log.Printf("message-text: %s", tele.Content.Text)
+			log.Printf("message-chat-lastname: %s", tele.Content.ChatContent.LastName)
+			log.Printf("message-chat-id: %d", tele.Content.ChatContent.Id)
+			log.Printf("message-chat-type: %s", tele.Content.ChatContent.Type)
+			log.Printf("message-chat-firstname: %s", tele.Content.ChatContent.FirstName)
+			log.Printf("message-chat-username: %s", tele.Content.ChatContent.UserName)
+			log.Printf("message-from-lastname: %s", tele.Content.FromContent.LastName)
+			log.Printf("message-from-id: %d", tele.Content.FromContent.Id)
+			log.Printf("message-from-type: %s", tele.Content.FromContent.Type)
+			log.Printf("message-from-firstname: %s", tele.Content.FromContent.FirstName)
+			log.Printf("message-from-username: %s", tele.Content.FromContent.UserName)
+		}
+		c.String(200, "success")
+	})
+
 	r.GET("/home", func(c *gin.Context) {
 		log.Printf("exec: %s", "ws://"+c.Request.Host+"/echo")
 		if c.Request.Host == "localhost:8080" {
@@ -253,6 +284,8 @@ func main() {
 	r.Run(":8080")
 }
 
+
+
 type Plugin struct {
 	Id string `json:"_id"`
 	Md5 string `json:"md5"`
@@ -279,6 +312,42 @@ var upgrader = websocket.Upgrader{
 		return true
 	},
 }
+
+//////////////telegram/////////////
+type Person struct {
+	Name string `form:"name"`
+	Address string `form:"address"`
+}
+
+type Telegram struct {
+	UpdateId int `json:"update_id"`
+	Content Message `json:"message"`
+}
+
+type Message struct {
+	Date int `json:"date"`
+	ChatContent Chat `json:"chat"`
+	MessageId int `json:"message_id"`
+	FromContent From `json:"from"`
+	Text string `json:"text"`
+}
+
+type Chat struct {
+	LastName string `json:"last_name"`
+	Id int `json:"id"`
+	Type string `json:"type"`
+	FirstName string `json:"first_name"`
+	UserName string `json:"username"`
+}
+
+type From struct {
+	LastName string `json:"last_name"`
+	Id int `json:"id"`
+	Type string `json:"type"`
+	FirstName string `json:"first_name"`
+	UserName string `json:"username"`
+}
+
 
 var homeTemplate = template.Must(template.New("").Parse(`
 <!DOCTYPE html>
