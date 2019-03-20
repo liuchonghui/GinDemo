@@ -7,6 +7,8 @@ import (
 	"net/http"
 	"github.com/gorilla/websocket"
 	"log"
+	"io/ioutil"
+	"encoding/json"
 )
 
 var DB = make(map[string]string)
@@ -37,19 +39,13 @@ func setupRouter() *gin.Engine {
 		c.JSON(http.StatusOK, fp)
 	})
 
-	//r.POST("/bot617804206", func(c *gin.Context) {
-	//	log.Printf("post /bot617804206 here:")
-	//	var person Person
-	//	if c.Bind(&person) == nil {
-	//		log.Printf(person.Name)
-	//		log.Printf(person.Address)
-	//	}
-	//	c.String(200, "success")
-	//})
 	r.POST("/bot617804206", func(c *gin.Context) {
 		log.Printf("post /bot617804206 here:")
+		data, _ := ioutil.ReadAll(c.Request.Body)
+		log.Printf("request-body: %v", string(data))
+
 		var tele Telegram
-		if c.BindJSON(&tele) == nil {
+		if json.Unmarshal(data, &tele) == nil {
 			log.Printf("update_id: %d", tele.UpdateId)
 			log.Printf("message-date: %d", tele.Content.Date)
 			log.Printf("message-message_id: %d", tele.Content.MessageId)
@@ -65,6 +61,7 @@ func setupRouter() *gin.Engine {
 			log.Printf("message-from-firstname: %s", tele.Content.FromContent.FirstName)
 			log.Printf("message-from-username: %s", tele.Content.FromContent.UserName)
 		}
+
 		c.String(200, "success")
 	})
 
