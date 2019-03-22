@@ -65,6 +65,48 @@ func setupRouter() *gin.Engine {
 		c.String(200, "success")
 	})
 
+
+	r.GET("/console", func(c *gin.Context) {
+		log.Printf("[C]exec: %s", "ws://"+c.Request.Host+"/cat")
+		if c.Request.Host == "localhost:8080" {
+			log.Printf("[C]localhost: %s", "ws://"+c.Request.Host+"/cat")
+			err := consoleTemplate.Execute(c.Writer, "ws://"+c.Request.Host+"/cat")
+			if err != nil {
+				log.Print("[C]upgrade:", err)
+			}
+		} else {
+			log.Printf("[C]127.0.0.1: %s", "ws://45.32.40.65:8080/cat")
+			err := homeTemplate.Execute(c.Writer, "ws://45.32.40.65:8080/cat")
+			if err != nil {
+				log.Print("[C]upgrade:", err)
+			}
+		}
+
+	})
+
+	r.GET("/cat", func(a *gin.Context) {
+		log.Printf("[C]>>>>>>>>>>/cat")
+		c, err := upgrader.Upgrade(a.Writer, a.Request, nil)
+		if err != nil {
+			log.Print("[C]upgrade:", err)
+			return
+		}
+		defer c.Close()
+		for {
+			mt, message, err := c.ReadMessage()
+			if err != nil {
+				log.Println("[C]read:", err)
+				break
+			}
+			log.Printf("[C]recv: %s", message)
+			err = c.WriteMessage(mt, message)
+			if err != nil {
+				log.Println("[C]write:", err)
+				break
+			}
+		}
+	})
+
 	r.GET("/home", func(c *gin.Context) {
 		log.Printf("exec: %s", "ws://"+c.Request.Host+"/echo")
 		if c.Request.Host == "localhost:8080" {
@@ -347,6 +389,79 @@ type From struct {
 
 
 var homeTemplate = template.Must(template.New("").Parse(`
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script>
+window.addEventListener("load", function(evt) {
+    var output = document.getElementById("output");
+    var input = document.getElementById("input");
+    var ws;
+    var print = function(message) {
+        var d = document.createElement("div");
+        d.innerHTML = message;
+        output.appendChild(d);
+    };
+    document.getElementById("open").onclick = function(evt) {
+        if (ws) {
+            return false;
+        }
+        ws = new WebSocket("{{.}}");
+        ws.onopen = function(evt) {
+            print("OPEN");
+        }
+        ws.onclose = function(evt) {
+            print("CLOSE");
+            ws = null;
+        }
+        ws.onmessage = function(evt) {
+            print("RESPONSE: " + evt.data);
+        }
+        ws.onerror = function(evt) {
+            print("ERROR: " + evt.data);
+        }
+        return false;
+    };
+    document.getElementById("send").onclick = function(evt) {
+        if (!ws) {
+            return false;
+        }
+        print("SEND: " + input.value);
+        ws.send(input.value);
+        return false;
+    };
+    document.getElementById("close").onclick = function(evt) {
+        if (!ws) {
+            return false;
+        }
+        ws.close();
+        return false;
+    };
+});
+</script>
+</head>
+<body>
+<table>
+<tr><td valign="top" width="50%">
+<p>Click "Open" to create a connection to the server,
+"Send" to send a message to the server and "Close" to close the connection.
+You can change the message and send multiple times.
+<p>
+<form>
+<button id="open">Open</button>
+<button id="close">Close</button>
+<p><input id="input" type="text" value="Hello world!">
+<button id="send">Send</button>
+</form>
+</td><td valign="top" width="50%">
+<div id="output"></div>
+</td></tr></table>
+</body>
+</html>
+`))
+
+var consoleTemplate = template.Must(template.New("").Parse(`
 <!DOCTYPE html>
 <html>
 <head>
