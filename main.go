@@ -13,6 +13,8 @@ import (
 
 var DB = make(map[string]string)
 
+var conn *websocket.Conn
+
 func setupRouter() *gin.Engine {
 	// Disable Console Color
 	// gin.DisableConsoleColor()
@@ -43,6 +45,15 @@ func setupRouter() *gin.Engine {
 		log.Printf("post /bot617804206 here:")
 		data, _ := ioutil.ReadAll(c.Request.Body)
 		log.Printf("request-body: %v", string(data))
+
+		if conn != nil {
+			var err = conn.WriteMessage(websocket.TextMessage, data)
+			if err != nil {
+				log.Printf("[C]conn.writemessage:", err)
+			}
+		} else {
+			log.Printf("[C]conn == nil")
+		}
 
 		var tele Telegram
 		if json.Unmarshal(data, &tele) == nil {
@@ -76,7 +87,7 @@ func setupRouter() *gin.Engine {
 			}
 		} else {
 			log.Printf("[C]127.0.0.1: %s", "ws://45.32.40.65:8080/cat")
-			err := homeTemplate.Execute(c.Writer, "ws://45.32.40.65:8080/cat")
+			err := consoleTemplate.Execute(c.Writer, "ws://45.32.40.65:8080/cat")
 			if err != nil {
 				log.Print("[C]upgrade:", err)
 			}
@@ -86,20 +97,20 @@ func setupRouter() *gin.Engine {
 
 	r.GET("/cat", func(a *gin.Context) {
 		log.Printf("[C]>>>>>>>>>>/cat")
-		c, err := upgrader.Upgrade(a.Writer, a.Request, nil)
+		conn, err := upgrader.Upgrade(a.Writer, a.Request, nil)
 		if err != nil {
 			log.Print("[C]upgrade:", err)
 			return
 		}
-		defer c.Close()
+		defer conn.Close()
 		for {
-			mt, message, err := c.ReadMessage()
+			mt, message, err := conn.ReadMessage()
 			if err != nil {
 				log.Println("[C]read:", err)
 				break
 			}
 			log.Printf("[C]recv: %s", message)
-			err = c.WriteMessage(mt, message)
+			err = conn.WriteMessage(mt, message)
 			if err != nil {
 				log.Println("[C]write:", err)
 				break
