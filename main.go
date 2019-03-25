@@ -97,25 +97,28 @@ func setupRouter() *gin.Engine {
 
 	r.GET("/cat", func(a *gin.Context) {
 		log.Printf("[C]>>>>>>>>>>/cat")
-		conn, err := upgrader.Upgrade(a.Writer, a.Request, nil)
+		tempConn, err := upgrader.Upgrade(a.Writer, a.Request, nil)
 		if err != nil {
 			log.Print("[C]upgrade:", err)
 			return
+		} else {
+			log.Print("[C]tempConn is availiable")
 		}
-		defer conn.Close()
-		for {
-			mt, message, err := conn.ReadMessage()
-			if err != nil {
-				log.Println("[C]read:", err)
-				break
-			}
-			log.Printf("[C]recv: %s", message)
-			err = conn.WriteMessage(mt, message)
-			if err != nil {
-				log.Println("[C]write:", err)
-				break
-			}
-		}
+		defer tempConn.Close()
+		conn = tempConn
+		//for {
+		//	mt, message, err := conn.ReadMessage()
+		//	if err != nil {
+		//		log.Println("[C]read:", err)
+		//		break
+		//	}
+		//	log.Printf("[C]recv: %s", message)
+		//	err = conn.WriteMessage(mt, message)
+		//	if err != nil {
+		//		log.Println("[C]write:", err)
+		//		break
+		//	}
+		//}
 	})
 
 	r.GET("/home", func(c *gin.Context) {
