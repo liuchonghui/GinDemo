@@ -106,19 +106,20 @@ func setupRouter() *gin.Engine {
 		}
 		defer tempConn.Close()
 		conn = tempConn
-		//for {
-		//	mt, message, err := conn.ReadMessage()
-		//	if err != nil {
-		//		log.Println("[C]read:", err)
-		//		break
-		//	}
-		//	log.Printf("[C]recv: %s", message)
-		//	err = conn.WriteMessage(mt, message)
-		//	if err != nil {
-		//		log.Println("[C]write:", err)
-		//		break
-		//	}
-		//}
+		for {
+			mt, message, err := conn.ReadMessage()
+			if err != nil {
+				log.Println("[C]read:", err)
+				break
+			}
+			log.Printf("[C]mt: %d", mt)
+			log.Printf("[C]recv: %s", message)
+			err = conn.WriteMessage(mt, message)
+			if err != nil {
+				log.Println("[C]write:", err)
+				break
+			}
+		}
 	})
 
 	r.GET("/home", func(c *gin.Context) {
