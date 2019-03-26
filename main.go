@@ -494,7 +494,7 @@ window.addEventListener("load", function(evt) {
     var print = function(message) {
         var d = document.createElement("div");
         d.innerHTML = message;
-        output.appendChild(d);
+        output.appendChild(d).scrollIntoView();
     };
     document.getElementById("open").onclick = function(evt) {
         if (ws) {
@@ -509,7 +509,7 @@ window.addEventListener("load", function(evt) {
             ws = null;
         }
         ws.onmessage = function(evt) {
-            print("RESPONSE: " + evt.data);
+            print("RESP| " + evt.data);
         }
         ws.onerror = function(evt) {
             print("ERROR: " + evt.data);
