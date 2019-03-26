@@ -15,6 +15,17 @@ var DB = make(map[string]string)
 
 var conn *websocket.Conn
 
+func logcat(format string, v ...interface{}) {
+	if conn != nil {
+		var err = conn.WriteMessage(websocket.TextMessage, []byte(fmt.Sprintf(format, v...)))
+		if err != nil {
+			log.Printf("[C]conn.writemessage:", err)
+		}
+	} else {
+		log.Printf("[C]conn == nil")
+	}
+}
+
 func setupRouter() *gin.Engine {
 	// Disable Console Color
 	// gin.DisableConsoleColor()
@@ -46,14 +57,7 @@ func setupRouter() *gin.Engine {
 		data, _ := ioutil.ReadAll(c.Request.Body)
 		log.Printf("request-body: %v", string(data))
 
-		if conn != nil {
-			var err = conn.WriteMessage(websocket.TextMessage, data)
-			if err != nil {
-				log.Printf("[C]conn.writemessage:", err)
-			}
-		} else {
-			log.Printf("[C]conn == nil")
-		}
+		logcat(string(data))
 
 		var tele Telegram
 		if json.Unmarshal(data, &tele) == nil {
@@ -61,6 +65,7 @@ func setupRouter() *gin.Engine {
 			log.Printf("message-date: %d", tele.Content.Date)
 			log.Printf("message-message_id: %d", tele.Content.MessageId)
 			log.Printf("message-text: %s", tele.Content.Text)
+			logcat("message-text: %s", tele.Content.Text)
 			log.Printf("message-chat-lastname: %s", tele.Content.ChatContent.LastName)
 			log.Printf("message-chat-id: %d", tele.Content.ChatContent.Id)
 			log.Printf("message-chat-type: %s", tele.Content.ChatContent.Type)
