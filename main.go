@@ -302,14 +302,87 @@ func setupRouter() *gin.Engine {
 		fmt.Println("data is " + dat)
 		var s []Signature
 		var sig_chengdu = Signature{City:"成都市",
-			Code:510100,
+			Code:510500,
 			District:"成都市"}
 		var sig_yibin = Signature{City:"宜宾市",
-			Code:510100,
+			Code:511501,
 			District:"宜宾市"}
+		var sig_ziyang = Signature{City:"资阳市",
+			Code:511502,
+			District:"资阳市"}
+		var sig_dazhou = Signature{City:"达州市",
+			Code:511503,
+			District:"达州市"}
+		var sig_chengdu2 = Signature{City:"成都市2成都市2成都市2成都市2成都市2成都市2成都市2成都市2",
+			Code:510110,
+			District:"成都市2成都市2成都市2成都市2成都市2成都市2成都市2成都市2成都市2"}
+		var sig_yibin2 = Signature{City:"宜宾市2宜宾市2宜宾市2宜宾市2宜宾市2",
+			Code:511520,
+			District:"宜宾市2宜宾市2"}
+		var sig_ziyang2 = Signature{City:"资阳市2",
+			Code:511531,
+			District:"资阳市2资阳市2资阳市2资阳市2资阳市2资阳市2资阳市2资阳市2"}
+		var sig_dazhou2 = Signature{City:"达州市2达州市2达州市2",
+			Code:511542,
+			District:"达州市2达州市2达州市2达州市2达州市2达州市2达州市2达州市2达州市2达州市2达州市2达州市2"}
+		var sig_chengdu3 = Signature{City:"成都市3",
+			Code:510100,
+			District:"成都市3"}
+		var sig_yibin3 = Signature{City:"宜宾市3",
+			Code:511200,
+			District:"宜宾市3"}
+		var sig_ziyang3 = Signature{City:"资阳市3",
+			Code:511301,
+			District:"资阳市3"}
+		var sig_dazhou3 = Signature{City:"达州市3",
+			Code:511402,
+			District:"达州市3"}
+		var sig_chengdu4 = Signature{City:"成都市4",
+			Code:511500,
+			District:"成都市4"}
+		var sig_yibin4 = Signature{City:"宜宾市4",
+			Code:512501,
+			District:"宜宾市4"}
+		var sig_ziyang4 = Signature{City:"资阳市4",
+			Code:513502,
+			District:"资阳市4"}
+		var sig_dazhou4 = Signature{City:"达州市4",
+			Code:514503,
+			District:"达州市4"}
+		var sig_chengdu5 = Signature{City:"成都市5",
+			Code:500500,
+			District:"成都市5"}
+		var sig_yibin5 = Signature{City:"宜宾市5",
+			Code:521501,
+			District:"宜宾市5"}
+		var sig_ziyang5 = Signature{City:"资阳市5",
+			Code:531502,
+			District:"资阳市5"}
+		var sig_dazhou5 = Signature{City:"达州市5",
+			Code:541503,
+			District:"达州市"}
+
 
 		s = append(s, sig_chengdu)
 		s = append(s, sig_yibin)
+		s = append(s, sig_ziyang)
+		s = append(s, sig_dazhou)
+		s = append(s, sig_chengdu2)
+		s = append(s, sig_yibin2)
+		s = append(s, sig_ziyang2)
+		s = append(s, sig_dazhou2)
+		s = append(s, sig_chengdu3)
+		s = append(s, sig_yibin3)
+		s = append(s, sig_ziyang3)
+		s = append(s, sig_dazhou3)
+		s = append(s, sig_chengdu4)
+		s = append(s, sig_yibin4)
+		s = append(s, sig_ziyang4)
+		s = append(s, sig_dazhou4)
+		s = append(s, sig_chengdu5)
+		s = append(s, sig_yibin5)
+		s = append(s, sig_ziyang5)
+		s = append(s, sig_dazhou5)
 
 		var  sr SignatureResult
 		sr.Code = 0
