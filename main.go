@@ -298,8 +298,8 @@ func setupRouter() *gin.Engine {
 	})
 
 	r.GET("/signature", func(c *gin.Context) {
-		dat := c.DefaultQuery("data", "N/A")
-		fmt.Println("data is " + dat)
+		dat0 := c.DefaultQuery("dat0", 0)
+		fmt.Println("dat0 is " + dat0)
 		var s []Signature
 		var sig_chengdu = Signature{City:"成都市",
 			Code:510500,
@@ -385,7 +385,7 @@ func setupRouter() *gin.Engine {
 		s = append(s, sig_dazhou5)
 
 		var  sr SignatureResult
-		sr.Code = 0
+		sr.Code = dat0
 		sr.Signature = s
 
 		c.JSON(http.StatusOK, sr)
