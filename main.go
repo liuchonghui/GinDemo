@@ -297,6 +297,27 @@ func setupRouter() *gin.Engine {
 		c.JSON(http.StatusOK, fp)
 	})
 
+	r.GET("/signature", func(c *gin.Context) {
+		dat := c.DefaultQuery("data", "N/A")
+		fmt.Println("data is " + dat)
+		var s []Signature
+		var sig_chengdu = Signature{City:"成都市",
+			Code:510100,
+			District:"成都市"}
+		var sig_yibin = Signature{City:"宜宾市",
+			Code:510100,
+			District:"宜宾市"}
+
+		s = append(s, sig_chengdu)
+		s = append(s, sig_yibin)
+
+		var  sr SignatureResult
+		sr.Code = 0
+		sr.Signature = s
+
+		c.JSON(http.StatusOK, sr)
+	})
+
 	// Get user value
 	r.GET("/user/:name", func(c *gin.Context) {
 		user := c.Params.ByName("name")
@@ -407,6 +428,20 @@ type From struct {
 	UserName string `json:"username"`
 }
 
+/////////signature/////////
+
+type SignatureResult struct {
+	Code int `json:"code"`
+	Signature []Signature `json:"signature"`
+}
+
+type Signature struct {
+	City string `json:"city"`
+	Code int `json:"code"`
+	District string `json:"district"`
+}
+
+////////////////////////////
 
 var homeTemplate = template.Must(template.New("").Parse(`
 <!DOCTYPE html>
