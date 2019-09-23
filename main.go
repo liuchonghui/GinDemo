@@ -9,6 +9,7 @@ import (
 	"log"
 	"io/ioutil"
 	"encoding/json"
+	"strconv"
 )
 
 var DB = make(map[string]string)
@@ -298,7 +299,7 @@ func setupRouter() *gin.Engine {
 	})
 
 	r.GET("/signature", func(c *gin.Context) {
-		dat0 := c.DefaultQuery("dat0", 0)
+		dat0 := c.DefaultQuery("dat0", "0")
 		fmt.Println("dat0 is " + dat0)
 		var s []Signature
 		var sig_chengdu = Signature{City:"成都市",
@@ -385,7 +386,7 @@ func setupRouter() *gin.Engine {
 		s = append(s, sig_dazhou5)
 
 		var  sr SignatureResult
-		sr.Code = dat0
+		sr.Code, _ = strconv.Atoi(dat0)
 		sr.Signature = s
 
 		c.JSON(http.StatusOK, sr)
