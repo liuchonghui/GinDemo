@@ -387,6 +387,7 @@ func setupRouter() *gin.Engine {
 
 		var  sr SignatureResult
 		sr.Code, _ = strconv.Atoi(dat0)
+		sr.CurrentSign = []string {}
 		sr.Signature = s
 
 		c.JSON(http.StatusOK, sr)
@@ -506,6 +507,7 @@ type From struct {
 
 type SignatureResult struct {
 	Code int `json:"code"`
+	CurrentSign []string `json:"current_sign"`
 	Signature []Signature `json:"signature"`
 }
 
