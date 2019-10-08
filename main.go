@@ -191,8 +191,28 @@ func setupRouter() *gin.Engine {
 			}
 		}
 	})
+//////////////////////////////
 
-	//fmt.Println(AAA + AAA)
+	r.GET("/vc_review", func(c *gin.Context) {
+		ver := c.DefaultQuery("ver", "N/A")
+		fmt.Println("ver is " + ver)
+		var s []Review
+		////////////////////1625version//////////////////////
+		var review_interaction_100 = Review{Id:"vc.lab.interaction",
+			Md5:Interaction_100_md5,
+			Cp:Interaction,
+			Url:Interaction_100_url}
+		s = append(s, review_interaction_100)
+
+		var data Dat
+		data.Result = "success"
+		data.Reviews = s
+		var lr LabReviewResult
+		lr.Content = data
+
+		c.JSON(http.StatusOK, lr)
+	})
+/////////////////////////////
 
 	r.GET("/fetch_plugin", func(c *gin.Context) {
 		ver := c.DefaultQuery("ver", "N/A")
@@ -452,7 +472,23 @@ type Plugin struct {
 //	State string `json:"state"`
 //	Plugins []Plugin `json:"plugins"`
 //}
+type LabReviewResult struct {
+	Content Dat `json:"data"`
+}
 
+
+type Dat struct {
+	Result string `json:"result"`
+	Reviews []Review `json:"vc_review"`
+}
+
+type Review struct {
+	Id string `json:"_id"`
+	Md5 string `json:"md5"`
+	Cp string `json:"vc"`
+	Url string `json:"url"`
+}
+////////////////////////////////////
 type FetchPluginResult struct {
 	Content Data `json:"data"`
 }

@@ -272,3 +272,8 @@ const (
     QingTing = "qt"
 )
 
+const Interaction_100_md5 = "9362b66a16a7df23c4280f83bef8c129"
+const Interaction_100_url = "https://gist.github.com/liuchonghui/b9757b65748eb42548213ec7b9572116/raw/b341b67265aed8db2ae58bbcd0660bc24e83b14d/1.0.0.interaction.9362b66a16a7df23c4280f83bef8c129.zip"
+const (
+    Interaction = "in"
+)
