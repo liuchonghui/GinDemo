@@ -10,6 +10,7 @@ import (
 	"io/ioutil"
 	"encoding/json"
 	"strconv"
+	"net"
 )
 
 var DB = make(map[string]string)
@@ -27,6 +28,55 @@ func logcat(format string, v ...interface{}) {
 	}
 }
 
+func XUserAgent(req *http.Request) string {
+	return req.Header.Get("User-Agent")
+}
+
+func RemoteIp(req *http.Request) string {
+	remoteAddr := req.RemoteAddr
+	if ip := req.Header.Get("X-Real-IP"); ip != "" {
+		remoteAddr = ip
+	} else if ip = req.Header.Get("X-Forwarded-For"); ip != "" {
+		remoteAddr = ip
+	} else {
+		remoteAddr, _, _ = net.SplitHostPort(remoteAddr)
+	}
+
+	if remoteAddr == "::1" {
+		remoteAddr = "127.0.0.1"
+	}
+
+	return remoteAddr
+}
+
+func XRealIp(req *http.Request) string {
+	remoteAddr := req.RemoteAddr
+	if ip := req.Header.Get("X-Real-IP"); ip != "" {
+		remoteAddr = ip
+	} else {
+		remoteAddr, _, _ = net.SplitHostPort(remoteAddr)
+	}
+
+	if remoteAddr == "::1" {
+		remoteAddr = "127.0.0.1"
+	}
+	return remoteAddr
+}
+
+func XForwardedFor(req *http.Request) string {
+	remoteAddr := req.RemoteAddr
+	if ip := req.Header.Get("X-Forwarded-For"); ip != "" {
+		remoteAddr = ip
+	} else {
+		remoteAddr, _, _ = net.SplitHostPort(remoteAddr)
+	}
+
+	if remoteAddr == "::1" {
+		remoteAddr = "127.0.0.1"
+	}
+	return remoteAddr
+}
+
 func setupRouter() *gin.Engine {
 	// Disable Console Color
 	// gin.DisableConsoleColor()
@@ -35,6 +85,20 @@ func setupRouter() *gin.Engine {
 	// Ping test
 	r.GET("/ping", func(c *gin.Context) {
 		c.String(200, "pong")
+	})
+
+	r.GET("/test", func(c *gin.Context) {
+		c.String(200, RemoteIp(c.Request))
+	})
+
+	r.GET("/header", func(c *gin.Context) {
+		var header = Header{
+			RealIp: XRealIp(c.Request),
+			ForwardedFor: XForwardedFor(c.Request),
+			RemoteAddr: RemoteIp(c.Request),
+			UserAgent: XUserAgent(c.Request),
+		}
+		c.JSON(http.StatusOK, header)
 	})
 
 	r.GET("/urlscheme", func(c *gin.Context) {
@@ -466,6 +530,13 @@ type Plugin struct {
 	Md5 string `json:"md5"`
 	Cp string `json:"cp"`
 	Url string `json:"url"`
+}
+
+type Header struct {
+	RealIp string `json:"real_ip"`
+	ForwardedFor string `json:"forwarded_for"`
+	RemoteAddr string `json:"remote_addr"`
+	UserAgent string `json:"user_agent"`
 }
 
 //type PluginResult struct {
