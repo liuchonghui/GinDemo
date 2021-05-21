@@ -101,6 +101,23 @@ func setupRouter() *gin.Engine {
 		c.JSON(http.StatusOK, header)
 	})
 
+	r.GET("/shadow", func(c *gin.Context) {
+		var shdata = ShData{Id:"s12a_117_1",
+			Md5:"725d58a7adc6a5fe5265dba87435bbc8",
+			Ver:"s12a_117_type1",
+			Url:"https://gist.github.com/liuchonghui/277cd9fac31b8cff8c9ccbc3600b55fd/raw/dce6b640b6f29e79d9093f9cca1702ec0c87ea4a/model_s12a_117_type1.bin",
+		}
+		var shadow = Shadow{
+			ShResult:"success",
+			ShData: shdata,
+		}
+		// also:
+		//var shadow Shadow
+		//shadow.ShResult = "success"
+		//shadow.ShData = shdata
+		c.JSON(http.StatusOK, shadow)
+	})
+
 	r.GET("/urlscheme", func(c *gin.Context) {
 		var s []Plugin
 		var plugin_urlscheme = Plugin{Id:"android.test.urlscheme",
@@ -537,6 +554,18 @@ type Header struct {
 	ForwardedFor string `json:"forwarded_for"`
 	RemoteAddr string `json:"remote_addr"`
 	UserAgent string `json:"user_agent"`
+}
+
+type Shadow struct {
+	ShResult string `json:"result"`
+	ShData ShData `json:"data"`
+}
+
+type ShData struct {
+	Id string `json:"_id"`
+	Md5 string `json:"md5"`
+	Ver string `json:"ver"`
+	Url string `json:"url"`
 }
 
 //type PluginResult struct {
