@@ -102,9 +102,9 @@ func setupRouter() *gin.Engine {
 	})
 
 	r.GET("/shadow", func(c *gin.Context) {
-		var shdata = ShData{Id:"s12a_117_1",
+		var shdata = ShData{Id:"shadow_model",
 			Md5:"725d58a7adc6a5fe5265dba87435bbc8",
-			Ver:"s12a_117_type1",
+			Ver:"model_s12a_117_type1",
 			Url:"https://gist.github.com/liuchonghui/277cd9fac31b8cff8c9ccbc3600b55fd/raw/dce6b640b6f29e79d9093f9cca1702ec0c87ea4a/model_s12a_117_type1.bin",
 		}
 		var shadow = Shadow{
