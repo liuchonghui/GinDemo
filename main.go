@@ -108,7 +108,8 @@ func setupRouter() *gin.Engine {
 			Url:"https://gist.github.com/liuchonghui/277cd9fac31b8cff8c9ccbc3600b55fd/raw/dce6b640b6f29e79d9093f9cca1702ec0c87ea4a/model_s12a_117_type1.bin",
 		}
 		var shadow = Shadow{
-			ShResult:"success",
+			ShResult: 0,
+			ShMsg:"",
 			ShData: shdata,
 		}
 		// also:
@@ -127,7 +128,23 @@ func setupRouter() *gin.Engine {
 		}
 		s = append(s, shadow_data)
 		var shadows Shadows
-		shadows.ShResult = "success"
+		shadows.ShResult = 0
+		shadows.ShMsg = ""
+		shadows.ShDatas = s
+		c.JSON(http.StatusOK, shadows)
+	})
+
+	r.GET("/shadows_err", func(c *gin.Context) {
+		var s []ShData = []ShData{}
+		//var shadow_data = ShData{Id:"shadow_model",
+		//	Md5:"725d58a7adc6a5fe5265dba87435bbc8",
+		//	Ver:"model_s12a_117_type1",
+		//	Url:"https://gist.github.com/liuchonghui/277cd9fac31b8cff8c9ccbc3600b55fd/raw/dce6b640b6f29e79d9093f9cca1702ec0c87ea4a/model_s12a_117_type1.bin",
+		//}
+		//s = append(s, shadow_data)
+		var shadows Shadows
+		shadows.ShResult = 0
+		shadows.ShMsg = ""
 		shadows.ShDatas = s
 		c.JSON(http.StatusOK, shadows)
 	})
@@ -571,7 +588,8 @@ type Header struct {
 }
 
 type Shadow struct {
-	ShResult string `json:"result"`
+	ShResult int `json:"result"`
+	ShMsg string `json:"message"`
 	ShData ShData `json:"data"`
 }
 
@@ -583,7 +601,8 @@ type ShData struct {
 }
 
 type Shadows struct {
-	ShResult string `json:"result"`
+	ShResult int `json:"result"`
+	ShMsg string `json:"message"`
 	ShDatas []ShData `json:"data"`
 }
 
