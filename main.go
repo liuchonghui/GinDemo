@@ -144,7 +144,7 @@ func setupRouter() *gin.Engine {
 		//s = append(s, shadow_data)
 		var shadows Shadows
 		shadows.ShResult = 0
-		shadows.ShMsg = ""
+		shadows.ShMsg = "device SN illegal"
 		shadows.ShDatas = s
 		c.JSON(http.StatusOK, shadows)
 	})
